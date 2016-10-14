@@ -121,7 +121,7 @@ CREATE TABLE Facture (
 
 -- Table: Heure
 CREATE TABLE Heure (
-    Heure time(14)  NOT NULL,
+    Heure time  NOT NULL,
     CONSTRAINT Heure_pk PRIMARY KEY  (Heure)
 )
 ;
@@ -311,7 +311,7 @@ CREATE TABLE proposer (
 -- Table: reserverRestaurant
 CREATE TABLE reserverRestaurant (
     Client_cli_id int  NOT NULL,
-    Heure_Heure time(14)  NOT NULL,
+    Heure_Heure time  NOT NULL,
     Date_Date date  NOT NULL,
     Table_tab_id int  NOT NULL,
     Table_Restaurant_resto_bat_id int  NOT NULL,
