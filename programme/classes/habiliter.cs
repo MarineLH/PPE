@@ -8,10 +8,10 @@ namespace PPE_Hotel
     class habiliter
     {
         // date_certification
-        public DateTime dateCertification { get; set; }
+        public DateTime date_certification { get; set; }
         // Personnel_pers_id
-        public int persId { get; set; }
+        public int Personnel_pers_id { get; set; }
         // Domaine_dom_id
-        public int domId { get; set; }
+        public int Domaine_dom_id { get; set; }
     }
 }

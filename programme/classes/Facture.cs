@@ -8,8 +8,8 @@ namespace PPE_Hotel
     class Facture
     {
         // fa_id
-        public int faId { get; set; }
+        public int fa_id { get; set; }
         // fa_date
-        public DateTime faDate { get; set; }
+        public DateTime fa_date { get; set; }
     }
 }

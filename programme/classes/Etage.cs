@@ -8,8 +8,8 @@ namespace PPE_Hotel
     class Etage
     {
         // Hotel_hotel_bat_id
-        public int hotelId { get; set; }
+        public int Hotel_hotel_bat_id { get; set; }
         // etage_id
-        public int etageId { get; set; }
+        public int etage_id { get; set; }
     }
 }

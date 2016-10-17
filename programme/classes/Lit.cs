@@ -8,8 +8,8 @@ namespace PPE_Hotel
     class Lit
     {
         // lit_id
-        public int litId { get; set; }
+        public int lit_id { get; set; }
         // lit_nbPlaces
-        public int litNbPlaces { get; set; }
+        public int lit_nbPlaces { get; set; }
     }
 }

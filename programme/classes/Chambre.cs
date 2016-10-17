@@ -8,10 +8,10 @@ namespace PPE_Hotel
     class Chambre
     {
         // Etage_Hotel_hotel_bat_id
-        public int hotelId { get; set; }
+        public int hotel_id { get; set; }
         // Etage_etage_id
-        public int etageId { get; set; }
+        public int etage_id { get; set; }
         // ch_id
-        public int chambreId { get; set; }
+        public int chambre_id { get; set; }
     }
 }

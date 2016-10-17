@@ -8,12 +8,12 @@ namespace PPE_Hotel
     class ProduitsAnnexes
     {
         // prod_id
-        public int propId { get; set; }
+        public int prod_id { get; set; }
         // prod_libelle
-        public string prodLibelle { get; set; }
+        public string prod_libelle { get; set; }
         // prod_PUHT
-        public float prodPUHT { get; set; }
+        public float prod_PUHT { get; set; }
         // TVA_tva_id
-        public int tvaId { get; set; }
+        public int TVA_tva_id { get; set; }
     }
 }

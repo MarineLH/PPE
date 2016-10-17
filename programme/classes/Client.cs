@@ -8,22 +8,22 @@ namespace PPE_Hotel
     class Client
     {
         // cli_id
-        public int cliId { get; set; }
+        public int cli_id { get; set; }
         // cli_nom
-        public string cliNom { get; set; }
+        public string cli_nom { get; set; }
         // cli_prenom
-        public string cliPrenom { get; set; }
+        public string cli_prenom { get; set; }
         // cli_adl1
-        public string cliAdl1 { get; set; }
+        public string cli_adl1 { get; set; }
         // cli_adl2
-        public string cliAdl2 { get; set; }
+        public string cli_adl2 { get; set; }
         // cli_adcp
-        public string cliAdcp { get; set; }
+        public string cli_adcp { get; set; }
         // cli_adville
-        public string cliAdville { get; set; }
+        public string cli_adville { get; set; }
         // cli_tel
-        public string cliTel { get; set; }
+        public string cli_tel { get; set; }
         // cli_mail
-        public string cliMail { get; set; }
+        public string cli_mail { get; set; }
     }
 }

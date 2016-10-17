@@ -8,8 +8,8 @@ namespace PPE_Hotel
     class Domaine
     {
         // dom_code
-        public string domCode { get; set; }
+        public string dom_code { get; set; }
         //dom_libelle
-        public string domLibelle { get; set; }
+        public string dom_libelle { get; set; }
     }
 }

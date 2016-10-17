@@ -8,20 +8,20 @@ namespace PPE_Hotel
     class Batiment
     {
         // bat_id
-        public int batId { get; set; }
+        public int bat_id { get; set; }
         // bat_adl1
-        public string batAdl1 { get; set; }
+        public string bat_adl1 { get; set; }
         // bat_adl2
-        public string batAdl2 { get; set; }
+        public string ba_adl2 { get; set; }
         // bat_adcp
-        public string batAdcp { get; set; }
+        public string bat_adcp { get; set; }
         // bat_adville
-        public string batAdville { get; set; }
+        public string bat_adville { get; set; }
         // bat_tel
-        public string batTel { get; set; }
+        public string bat_tel { get; set; }
         // bat_mailcontact
-        public string batMailcontact { get; set; }
+        public string bat_mailcontact { get; set; }
         // bat_libelle
-        public string batLibelle { get; set; }
+        public string bat_libelle { get; set; }
     }
 }
