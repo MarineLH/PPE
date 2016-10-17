@@ -18,7 +18,7 @@ namespace PPE_Hotel
         // cir_tarifTTC
         public float cir_tarifTTC { get; set; }
         // Hotel_hotel_bat_id
-        public int hotel_id { get; set; }
+        public int Hotel_hotel_bat_id { get; set; }
         // cir_heure_depart_cir
         public TimeSpan cir_heure_depart_cir { get; set; }
         // cir_heure_arrivee_cir
