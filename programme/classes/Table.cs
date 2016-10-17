@@ -8,8 +8,8 @@ namespace PPE_Hotel
     class Table
     {
         // Restaurant_resto_bat_id
-        public int restoId { get; set; }
+        public int Restaurant_resto_bat_id { get; set; }
         // tab_id
-        public int tabId { get; set; }
+        public int tab_id { get; set; }
     }
 }

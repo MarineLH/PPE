@@ -8,24 +8,24 @@ namespace PPE_Hotel
     class Reservation
     {
         // res_id
-        public int resId { get; set; }
+        public int res_id { get; set; }
         // res_date
-        public DateTime resDate { get; set; }
+        public DateTime res_date { get; set; }
         // res_nbJours
-        public int resNbJours { get; set; }
+        public int res_nbJours { get; set; }
         // Client_cli_id
-        public int clientId { get; set; }
+        public int Client_cli_id { get; set; }
         // CircuiTouristique_cir_id
-        public int circuitId { get; set; }
+        public int CircuiTouristique_cir_id { get; set; }
         // Chambre_ch_id
-        public int chambreId { get; set; }
+        public int Chambre_ch_id { get; set; }
         // Chambre_Etage_etage_id
-        public int etageId { get; set; }
+        public int Chambre_Etage_etage_id { get; set; }
         // Chambre_Etage_Hotel_hotel_bat_id
-        public int hotelId { get; set; }
+        public int Chambre_Etage_Hotel_hotel_bat_id { get; set; }
         // Voiture_voit_id
-        public int voitureId { get; set; }
+        public int Voiture_voit_id { get; set; }
         // Facture_fa_id
-        public int factureId { get; set; }
+        public int Facture_fa_id { get; set; }
     }
 }

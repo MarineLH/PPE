@@ -8,20 +8,20 @@ namespace PPE_Hotel
     class Voiture
     {
         // voit_id
-        public int voitId { get; set; }
+        public int voit_id { get; set; }
         // voit_marque
-        public string voitMarque { get; set; }
+        public string voit_marque { get; set; }
         // voit_modele
-        public string voitModele { get; set; }
+        public string voit_modele { get; set; }
         // voit_immat
-        public string voitImmat { get; set; }
+        public string voit_immat { get; set; }
         // voit_km
-        public float voitKm { get; set; }
+        public float voit_km { get; set; }
         // voit_tarifUHT
-        public float voitTarifUHT { get; set; }
+        public float voit_tarifUHT { get; set; }
         // Hotel_hotel_bat_id
-        public int hotelId { get; set; }
+        public int Hotel_hotel_bat_id { get; set; }
         // TVA_tva_id
-        public int tvaId { get; set; }
+        public int TVA_tva_id { get; set; }
     }
 }

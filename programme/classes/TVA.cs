@@ -8,8 +8,8 @@ namespace PPE_Hotel
     class TVA
     {
         // tva_id
-        public int tvaId { get; set; }
+        public int tva_id { get; set; }
         // tva_taux
-        public float tvaTaux { get; set; }
+        public float tva_taux { get; set; }
     }
 }

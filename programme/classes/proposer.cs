@@ -10,12 +10,12 @@ namespace PPE_Hotel
         // quantite
         public int quantite { get; set; }
         // Chambre_ch_id
-        public int chambreId { get; set; }
+        public int Chambre_ch_id { get; set; }
         // Chambre_Etage_etage_id
-        public int etageId { get; set; }
+        public int Chambre_Etage_etage_id { get; set; }
         // Chambre_Etage_Hotel_hotel_bat_id
-        public int hotelId { get; set; }
+        public int Chambre_Etage_Hotel_hotel_bat_id { get; set; }
         // ProduitsAnnexes_prod_id
-        public int produitId { get; set; }
+        public int ProduitsAnnexes_prod_id { get; set; }
     }
 }
