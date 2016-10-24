@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class Reservation
+    public class Reservation
     {
         // res_id
         public int res_id { get; set; }

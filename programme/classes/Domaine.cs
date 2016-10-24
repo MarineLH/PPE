@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class Domaine
+    public class Domaine
     {
         // dom_code
         public string dom_code { get; set; }

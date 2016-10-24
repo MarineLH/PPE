@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class TVA
+    public class TVA
     {
         // tva_id
         public int tva_id { get; set; }

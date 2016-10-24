@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class Facture
+    public class Facture
     {
         // fa_id
         public int fa_id { get; set; }

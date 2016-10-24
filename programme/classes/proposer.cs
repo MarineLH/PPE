@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class proposer
+    public class proposer
     {
         // quantite
         public int quantite { get; set; }

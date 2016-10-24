@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class Batiment
+    public class Batiment
     {
         // bat_id
         public int bat_id { get; set; }

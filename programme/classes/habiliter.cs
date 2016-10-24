@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class habiliter
+    public class habiliter
     {
         // date_certification
         public DateTime date_certification { get; set; }

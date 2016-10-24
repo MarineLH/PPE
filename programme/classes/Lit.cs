@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class Lit
+    public class Lit
     {
         // lit_id
         public int lit_id { get; set; }

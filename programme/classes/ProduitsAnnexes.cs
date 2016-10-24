@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class ProduitsAnnexes
+    public class ProduitsAnnexes
     {
         // prod_id
         public int prod_id { get; set; }

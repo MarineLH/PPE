@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PPE_ABAS
 {
-    class Voiture
+    public class Voiture
     {
         // voit_id
         public int voit_id { get; set; }
