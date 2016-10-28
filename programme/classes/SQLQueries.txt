@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace PPE_ABAS
+{
+    /// <summary>
+    /// Classe globale qui stocke toutes les requêtes SQL qui seront utilisées dans le programme
+    /// </summary>
+    public static class SQLQueries
+    {
+	// TODO : Ajouter les requetes SQL sans remplacer
+
+        /// <summary>
+        /// Récupérer la liste des bâtiments pour la combobox de connexion
+        /// </summary>
+        public static string connexSelectBatiments = "SELECT * FROM Batiment;";
+
+        /// <summary>
+        /// Récupérer le bâtiment sélectionné dans la combobox précédente
+        /// </summary>
+        public static string connexSelectUnBatiment = "SELECT * FROM Batiment WHERE bat_libelle = @libelle;";
+    }
+}
