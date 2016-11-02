@@ -21,5 +21,27 @@ namespace PPE_ABAS
         /// Récupérer le bâtiment sélectionné dans la combobox précédente
         /// </summary>
         public static string connexSelectUnBatiment = "SELECT * FROM Batiment WHERE bat_libelle = @libelle;";
+
+
+         /// <summary>
+        /// Récupération d'un client du restaurant avec son cli_id en paramètre
+        /// </summary>
+        public static string restaurantSelectClientWithId = "SELECT * FROM Client WHERE cli_id = @id;";
+
+
+        /// <summary>
+        /// Récupère la liste des réservations pour un client :
+        /// Le nombre de tables pour le client pour une date et heure donnée
+        /// En fonction du bâtiment sélectionné  et la date et l'heure d'aujourd'hui
+        /// </summary>
+        public static string restaurantSelectReservations = @"SELECT*, COUNT(*) AS nbtables FROM reserverRestaurant 
+                                                              WHERE res_dh >= DATE(NOW()) AND Table_Restaurant_resto_bat_id = @batId 
+                                                              GROUP BY Client_cli_id, res_dh 
+                                                              ORDER BY res_dh;";
+        /// <summary>
+        /// Récupère le nombre de table maximum par batitment
+        /// </summary>
+        public static string restaurantGetMaxTableBatiment = "SELECT COUNT(*) AS NBTABLES FROM `Table` WHERE Restaurant_resto_bat_id = @batId";
+
     }
 }
