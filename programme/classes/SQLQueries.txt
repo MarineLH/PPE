@@ -88,5 +88,15 @@ namespace PPE_ABAS
         /// </summary>
         public static string restaurantGetMaxTableBatiment = "SELECT COUNT(*) AS NBTABLES FROM `Table` WHERE Restaurant_resto_bat_id = @batId";
 
+        /// <summary>
+        /// Récupération de la liste de personne en fonction de l'id du bâtiment en paramètre
+        /// </summary>
+        public static string getPersonnel = "SELECT * FROM Personnel WHERE Batiment_bat_id = @batId";
+
+        /// <summary>
+        /// Récupération d'un user en fonction de son id en paramètre
+        /// </summary>
+        public static string getPersonnelById = "SELECT * FROM Personnel WHERE pers_id  = @persId";
+
     }
 }
