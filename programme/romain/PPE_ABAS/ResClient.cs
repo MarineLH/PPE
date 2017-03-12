@@ -36,14 +36,14 @@ namespace PPE_ABAS
             hotel_id = res.Chambre_Etage_Hotel_hotel_bat_id;
             cli_nom = cli.cli_nom;
             cli_prenom = cli.cli_prenom;
-            numChambre = res.NoChambre();
+            numChambre = res.numChambre;
             cliFullName = cli_nom + " " + cli_prenom;
             res_dateSortie = res.res_dateSortie;
         }
         public override string ToString()
         {
 
-            return cli_nom + " " + cli_prenom + " | " + res_date;
+            return cliFullName + " | " + res_date;
         }
 
         public string DebugString()

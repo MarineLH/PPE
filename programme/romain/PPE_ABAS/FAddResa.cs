@@ -5,27 +5,42 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using Dapper;
 using MySql.Data.MySqlClient;
-using System.Text.RegularExpressions;
+using PPE_ABAS.Properties;
 
 namespace PPE_ABAS
 {
-    public partial class f_AddReservation : Form
+    public partial class FAddResa : Form
     {
-        private Chambre SelectedChambre = null;
-        private DateTime resDate, resDateSortie;
+        private Chambre _selectedChambre = null;
+        private DateTime _resDate, _resDateSortie;
+        private FMainMenu _parent;
 
-        public f_AddReservation()
+        public FAddResa()
         {
             InitializeComponent();
         }
 
-        private void f_AddReservation_Load(object sender, EventArgs e)
+        public FAddResa(FMainMenu fParent)
         {
+            InitializeComponent();
+            _parent = fParent;
+        }
+
+        private void bt_quit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void f_add_resa_Load(object sender, EventArgs e)
+        {
+            SetTexts();
+
             dt_resDate.CustomFormat = "yyyy-MM-dd H:mm:ss";
+            dt_resDate.MinDate = DateTime.Today;
             ChangeDateSortie();
             lbl_chambresDispos.Text = "";
 
@@ -34,22 +49,21 @@ namespace PPE_ABAS
 
             // Connexion à la base puis requête et stockage des résultats
             // avantage c'est ouverture puis fermeture directe de la connexion
-            using (MySqlConnection connection = new MySqlConnection(Globals.MySQLConnectionString))
+            using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
             {
                 clients = connection.Query<Client>(SQLQueries.getClients);
             }
-
-            // Ajout des noms des batiments dans la comboBox
-            foreach (Client client in clients)
+            // Ajout des noms des clients dans la comboBox
+            foreach (var client in clients)
             {
                 cb_existingClients.Items.Add(client);
             }
 
-            using (MySqlConnection connection = new MySqlConnection(Globals.MySQLConnectionString))
+            using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
             {
                 typeChambres = connection.Query<TypeChambre>(SQLQueries.getTypesChambres);
             }
-            foreach (TypeChambre typeChambre in typeChambres)
+            foreach (var typeChambre in typeChambres)
             {
                 cb_typeChambre.Items.Add(typeChambre);
             }
@@ -57,7 +71,7 @@ namespace PPE_ABAS
 
         private void cb_existingClients_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Client selectedClient = (Client)cb_existingClients.SelectedItem;
+            var selectedClient = (Client) cb_existingClients.SelectedItem;
             txt_CliNom.Text = selectedClient.cli_nom;
             txt_CliNom.Tag = selectedClient.cli_id;
             txt_CliPrenom.Text = selectedClient.cli_prenom;
@@ -71,17 +85,8 @@ namespace PPE_ABAS
 
         private void rb_createClient_CheckedChanged(object sender, EventArgs e)
         {
-            txt_CliNom.Text = "";
-            txt_CliNom.Tag = null;
-            txt_CliPrenom.Text = "";
-            txt_CliTel.Text = "";
-            txt_CliAdl1.Text = "";
-            txt_CliAdl2.Text = "";
-            txt_CliAdcp.Text = "";
-            txt_CliAdville.Text = "";
-            txt_CliMail.Text = "";
-
             txt_CliNom.Enabled = true;
+            txt_CliNom.Tag = null; // vider le tag pour créer un nouveau client
             txt_CliPrenom.Enabled = true;
             txt_CliTel.Enabled = true;
             txt_CliAdl1.Enabled = true;
@@ -124,82 +129,80 @@ namespace PPE_ABAS
 
         private void ChangeDateSortie()
         {
-            resDate = new DateTime(dt_resDate.Value.Year, dt_resDate.Value.Month, dt_resDate.Value.Day);
-            TimeSpan nbNuits = new TimeSpan((int)nup_resNbJours.Value, 12, 0, 0);
+            _resDate = new DateTime(dt_resDate.Value.Year, dt_resDate.Value.Month, dt_resDate.Value.Day);
+            var nbNuits = new TimeSpan((int) nup_resNbJours.Value, 12, 0, 0);
 
-            resDateSortie = resDate + nbNuits;
-            
-            txt_resDateSortie.Text = resDateSortie.ToString("yyyy-MM-dd H:mm:ss");
+            _resDateSortie = _resDate + nbNuits;
 
+            txt_resDateSortie.Text = _resDateSortie.ToString("yyyy-MM-dd H:mm:ss");
         }
 
         private void SelectChambre()
         {
             int count;
-            if (cb_typeChambre.SelectedItem != null)
+            if (cb_typeChambre.SelectedItem == null) return;
+            using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
             {
-                using (MySqlConnection connection = new MySqlConnection(Globals.MySQLConnectionString))
+                dynamic result = connection.Query(
+                    SQLQueries.countNbFreeChambres,
+                    new
+                    {
+                        batId = Globals.selectedBat.bat_id,
+                        typeId = ((TypeChambre) cb_typeChambre.SelectedItem).tc_id,
+                        dateSortie = txt_resDateSortie.Text,
+                        date = dt_resDate.Text
+                    }
+                ).Single();
+                count = (int) result.Count;
+            }
+            if (count > 0)
+            {
+                using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
                 {
-                    dynamic result = connection.Query(
-                        SQLQueries.countNbFreeChambres,
+                    _selectedChambre = connection.Query<Chambre>(
+                        SQLQueries.selectFreeChambres,
                         new
                         {
                             batId = Globals.selectedBat.bat_id,
-                            typeId = ((TypeChambre)cb_typeChambre.SelectedItem).tc_id,
+                            typeId = ((TypeChambre) cb_typeChambre.SelectedItem).tc_id,
                             dateSortie = txt_resDateSortie.Text,
                             date = dt_resDate.Text
                         }
-                    ).Single();
-                    count = (int)result.Count;
+                    ).First();
                 }
-                if (count > 0)
-                {
-                    using (MySqlConnection connection = new MySqlConnection(Globals.MySQLConnectionString))
-                    {
-                        SelectedChambre = connection.Query<Chambre>(
-                            SQLQueries.selectFreeChambres,
-                            new
-                            {
-                                batId = Globals.selectedBat.bat_id,
-                                typeId = ((TypeChambre)cb_typeChambre.SelectedItem).tc_id,
-                                dateSortie = txt_resDateSortie.Text,
-                                date = dt_resDate.Text
-                            }
-                        ).First();
-                    }
-                    lbl_chambresDispos.Text = "Nombre de chambres disponibles : " + count.ToString() + " | Chambre sélectionnée : " + SelectedChambre.ToString();
-                }
-                else
-                {
-                    SelectedChambre = null;
-                    lbl_chambresDispos.Text = "Aucune chambre de ce type disponible dans l'hôtel";
-                }
+                lbl_chambresDispos.Text = Resources.f_add_resas_chDispo + count + " | " +
+                                          Resources.f_add_resas_chSelect + _selectedChambre;
+            }
+            else
+            {
+                _selectedChambre = null;
+                lbl_chambresDispos.Text = Resources.f_add_resas_noDispo;
             }
         }
 
 
         private void bt_cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void bt_validate_Click(object sender, EventArgs e)
         {
-            int clientId = 0;
-            bool canContinueFromClient = false;
+            var clientId = 0;
+            var canContinueFromClient = false;
 
             // Utilisateur enregistré
             if (txt_CliNom.Text != "" && txt_CliNom.Tag != null)
             {
                 canContinueFromClient = true;
-                clientId = (int)txt_CliNom.Tag;
+                clientId = (int) txt_CliNom.Tag;
             }
             // Utilisateur à créer
             else if (txt_CliNom.Text != "" && txt_CliNom.Tag == null)
             {
                 canContinueFromClient = true;
 
-                Client newC = new Client
+                var newC = new Client
                 {
                     cli_nom = txt_CliNom.Text,
                     cli_prenom = txt_CliPrenom.Text != "" ? txt_CliPrenom.Text : null,
@@ -215,48 +218,49 @@ namespace PPE_ABAS
                     clientId = connection.Query<int>(SQLQueries.addClient, newC).Single();
                 }
             }
-            // Champ vide
-            else if (txt_CliNom.Text == "")
-            {
-                canContinueFromClient = false;
-            }
 
             if (canContinueFromClient)
             {
-                // Pas de chambre sélectionnée.
-                if(SelectedChambre != null)
+                // Chambre sélectionnée.
+                if (_selectedChambre != null)
                 {
-                    Reservation newResa = new Reservation
+                    using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
                     {
-                        res_date = dt_resDate.Value,
-                        res_nbJours = (int)nup_resNbJours.Value,
-                        res_dateSortie = resDateSortie,
-                        Client_cli_id = (int)clientId,
-                        Chambre_Etage_Hotel_hotel_bat_id = SelectedChambre.Etage_Hotel_hotel_bat_id,
-                        Chambre_Etage_etage_id = SelectedChambre.Etage_etage_id,
-                        Chambre_ch_id = SelectedChambre.ch_id
-                    };
+                        var client = connection.Query<Client>(SQLQueries.getClientById, new {cliId = clientId}).Single();
 
-                    using (MySqlConnection connection = new MySqlConnection(Globals.MySQLConnectionString))
-                    {
-                        connection.Execute(SQLQueries.addResa, newResa);
-                        MessageBox.Show("La réservation a bien été enregistrée !", "Succès", MessageBoxButtons.OK);
-                        f_ReadReservations f = new f_ReadReservations();
-                        f.MdiParent = this.MdiParent;
-                        ((f_Main)this.MdiParent).ShowForm(f);
-                        this.Close();
+                        connection.Execute(SQLQueries.addResa, new
+                        {
+                            res_date = dt_resDate.Value,
+                            res_nbJours = (int) nup_resNbJours.Value,
+                            res_dateSortie = _resDateSortie,
+                            Client_cli_id = client.cli_id,
+                            Chambre_Etage_Hotel_hotel_bat_id = _selectedChambre.Etage_Hotel_hotel_bat_id,
+                            Chambre_Etage_etage_id = _selectedChambre.Etage_etage_id,
+                            Chambre_ch_id = _selectedChambre.ch_id
+                        });
+
+                        MessageBox.Show(Resources.f_add_resas_success, Resources.success, MessageBoxButtons.OK);
+                        _parent.SetBatimentInfos();
+                        Close();
                     }
                 }
+                // Pas de chambre sélectionnée.
                 else
                 {
-                    MessageBox.Show("Aucune chambre n'a été sélectionnée !", "Attention", MessageBoxButtons.OK);
+                    MessageBox.Show(Resources.f_add_resas_no_ch, Resources.warning, MessageBoxButtons.OK);
                 }
             }
             else
             {
-                MessageBox.Show("Vous n'avez pas choisi ou créé de client !", "Attention", MessageBoxButtons.OK);
+                MessageBox.Show(Resources.f_add_resas_no_client, Resources.warning, MessageBoxButtons.OK);
             }
+        }
 
+        private void SetTexts()
+        {
+            Text = Resources.f_add_resa_title;
+            lbl_currentHotel.Text = Resources.f_add_resa_selected + Globals.selectedBat;
+            bt_quit.Text = Resources.close;
         }
     }
 }

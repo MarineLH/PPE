@@ -26,9 +26,15 @@ namespace PPE_ABAS
         // cli_mail
         public string cli_mail { get; set; }
 
+        public int TotalDansHotel { get; set; }
+
+        public int TotalChaineHotels { get; set; }
+
         public override string ToString()
         {
             return cli_nom + " " + cli_prenom;
         }
+
+        public string fullName { get { return cli_prenom + " " + cli_nom; } }
     }
 }

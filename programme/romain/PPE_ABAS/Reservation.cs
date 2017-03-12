@@ -13,8 +13,8 @@ namespace PPE_ABAS
         public DateTime res_date { get; set; }
         // res_nbJours
         public int res_nbJours { get; set; }
-        // Client_cli_id
-        public int Client_cli_id { get; set; }
+       
+       
         // CircuiTouristique_cir_id
         public int CircuiTouristique_cir_id { get; set; }
         // Chambre_ch_id
@@ -30,13 +30,10 @@ namespace PPE_ABAS
 
         public DateTime res_dateSortie { get; set; }
 
-        public string NoChambre()
-        {
-            string NoChambre;
+        public string numChambre { get { return this.Chambre_Etage_etage_id.ToString() + Globals.LeadingZero(this.Chambre_ch_id); } }
 
-            NoChambre = this.Chambre_Etage_etage_id.ToString() + Globals.LeadingZero(this.Chambre_ch_id);
+        // Client_cli_id
+        public Client Client_cli_id { get; set; }
 
-            return NoChambre;
-        }
     }
 }

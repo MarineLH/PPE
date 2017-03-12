@@ -16,7 +16,7 @@ namespace PPE_ABAS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new f_Main());
+            Application.Run(new FConnex());
         }
     }
 }

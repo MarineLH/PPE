@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3859BD30-8BFF-40CE-A060-E3C4D92961EC}</ProjectGuid>
+    <ProjectGuid>{AEAE402F-9286-4DC7-8B00-894995DD1483}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PPE_ABAS</RootNamespace>
@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publier\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,19 +47,21 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>4.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4, processorArchitecture=MSIL">
-      <HintPath>..\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="ObjectListView">
+      <HintPath>..\..\..\..\..\Documents\Visual Studio 2012\Projects\PPE_Hotel\packages\ObjectListView.Official.2.9.1\lib\net20\ObjectListView.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +73,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abas_db_dataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>abas_db_dataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Batiment.cs" />
     <Compile Include="Chambre.cs" />
     <Compile Include="CircuitTouristique.cs" />
@@ -63,45 +85,33 @@
     <Compile Include="Domaine.cs" />
     <Compile Include="Etage.cs" />
     <Compile Include="Facture.cs" />
-    <Compile Include="f_AddReservation.cs">
+    <Compile Include="FAddResa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="f_AddReservation.Designer.cs">
-      <DependentUpon>f_AddReservation.cs</DependentUpon>
+    <Compile Include="FAddResa.Designer.cs">
+      <DependentUpon>FAddResa.cs</DependentUpon>
     </Compile>
-    <Compile Include="f_Connex.cs">
+    <Compile Include="FConnex.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="f_Connex.Designer.cs">
-      <DependentUpon>f_Connex.cs</DependentUpon>
+    <Compile Include="FConnex.Designer.cs">
+      <DependentUpon>FConnex.cs</DependentUpon>
     </Compile>
-    <Compile Include="f_Main.cs">
+    <Compile Include="FMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="f_Main.Designer.cs">
-      <DependentUpon>f_Main.cs</DependentUpon>
+    <Compile Include="FMainMenu.Designer.cs">
+      <DependentUpon>FMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="f_ReadReservations.cs">
+    <Compile Include="FQuickSwitch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="f_ReadReservations.Designer.cs">
-      <DependentUpon>f_ReadReservations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="f_Resas_OLV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f_Resas_OLV.Designer.cs">
-      <DependentUpon>f_Resas_OLV.cs</DependentUpon>
+    <Compile Include="FQuickSwitch.Designer.cs">
+      <DependentUpon>FQuickSwitch.cs</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="habiliter.cs" />
     <Compile Include="Hotel.cs" />
-    <Compile Include="Models\Generated\Database.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Personnel.cs" />
     <Compile Include="ProduitsAnnexes.cs" />
     <Compile Include="Program.cs" />
@@ -116,20 +126,17 @@
     <Compile Include="TVA.cs" />
     <Compile Include="TypeChambre.cs" />
     <Compile Include="Voiture.cs" />
-    <EmbeddedResource Include="f_AddReservation.resx">
-      <DependentUpon>f_AddReservation.cs</DependentUpon>
+    <EmbeddedResource Include="FAddResa.resx">
+      <DependentUpon>FAddResa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f_Connex.resx">
-      <DependentUpon>f_Connex.cs</DependentUpon>
+    <EmbeddedResource Include="FConnex.resx">
+      <DependentUpon>FConnex.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f_Main.resx">
-      <DependentUpon>f_Main.cs</DependentUpon>
+    <EmbeddedResource Include="FMainMenu.resx">
+      <DependentUpon>FMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f_ReadReservations.resx">
-      <DependentUpon>f_ReadReservations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="f_Resas_OLV.resx">
-      <DependentUpon>f_Resas_OLV.cs</DependentUpon>
+    <EmbeddedResource Include="FQuickSwitch.resx">
+      <DependentUpon>FQuickSwitch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,9 +146,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Models\Generated\PetaPoco.Core.ttinclude" />
-    <None Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <None Include="abas_db_dataSet.xsc">
+      <DependentUpon>abas_db_dataSet.xsd</DependentUpon>
+    </None>
+    <None Include="abas_db_dataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>abas_db_dataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="abas_db_dataSet.xss">
+      <DependentUpon>abas_db_dataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,18 +174,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="delete.png" />
-    <Content Include="edit.png" />
-    <Content Include="Models\Generated\Database.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Database.cs</LastGenOutput>
-    </Content>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <Content Include="4.ico" />
+    <None Include="Resources\tes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -33,5 +33,10 @@ namespace PPE_ABAS
         public string pers_adl2 { get; set; }
         // pers_superieur
         public int pers_superieur { get; set; }
+
+        public override string ToString()
+        {
+            return pers_prenom + ' ' + pers_nom;
+        }
     }
 }

@@ -17,6 +17,16 @@ namespace PPE_ABAS
         public static string connexSelectBatiments = "SELECT * FROM Batiment;";
 
         /// <summary>
+        /// Récupérer la liste des utilisateurs pour la seconde combobox de connexion
+        /// </summary>
+        public static string connexSelectUsers = "SELECT * FROM Personnel;";
+
+        /// <summary>
+        /// Récupérer tous les membres du personnel d'un batiment
+        /// </summary>
+        public static string connexSelectUsersByBat = "SELECT * FROM Personnel WHERE Batiment_bat_id = @batId;";
+
+        /// <summary>
         /// Récupérer le bâtiment sélectionné dans la combobox précédente
         /// </summary>
         public static string connexSelectUnBatiment = "SELECT * FROM Batiment WHERE bat_libelle = @libelle;";
@@ -24,16 +34,28 @@ namespace PPE_ABAS
         /// <summary>
         /// Récupérer les réservations pour aujourd'hui et le futur d'un bâtiment
         /// </summary>
-        public static string hotelGetReservations = @"SELECT * FROM Reservation 
+        public static string hotelGetReservations = @"SELECT * FROM Reservation r
+                                                    LEFT JOIN Client c on r.Client_cli_id = c.cli_id
                                                     WHERE DATE(NOW()) <= DATE(res_dateSortie)
                                                     AND Chambre_Etage_Hotel_hotel_bat_id = @batId";
 
         /// <summary>
         /// Récupérer les anciennes réservations passées
         /// </summary>
-        public static string hotelGetHistorique = @"SELECT * FROM Reservation
+        public static string hotelGetHistorique = @"SELECT * FROM Reservation r
+                                                    LEFT JOIN Client c on r.Client_cli_id = c.cli_id
                                                     WHERE DATE(res_dateSortie) < DATE(NOW())
                                                     AND Chambre_Etage_Hotel_hotel_bat_id = @batId";
+
+        public static string getClientsByHotel = @"SELECT c.*,
+                                                      (SELECT COUNT(res_id)
+                                                       FROM Reservation r1
+                                                       WHERE r1.Client_cli_id = r.Client_cli_id
+                                                        AND r1.Chambre_Etage_Hotel_hotel_bat_id = @batId) as TotalDansHotel,
+                                                      (SELECT COUNT(res_id) FROM Reservation r2 WHERE r2.Client_cli_id = r.Client_cli_id) as TotalChaineHotels
+                                                    FROM Client c RIGHT JOIN Reservation r ON c.cli_id = r.Client_cli_id
+                                                    GROUP BY c.cli_id
+                                                    HAVING TotalDansHotel <> 0";
 
         /// <summary>
         /// Récupère les infos d'un client pour un ID donné

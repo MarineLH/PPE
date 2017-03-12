@@ -1,18 +1,17 @@
-c:\users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\PPE_ABAS.exe.config
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\PPE_ABAS.exe
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\PPE_ABAS.pdb
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\Dapper.dll
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\MySql.Data.dll
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\ObjectListView.dll
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\Dapper.xml
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\bin\Debug\ObjectListView.xml
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.csprojResolveAssemblyReference.cache
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.f_AddReservation.resources
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.f_Main.resources
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.f_ReadReservations.resources
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.Properties.Resources.resources
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.csproj.GenerateResource.Cache
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.exe
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.pdb
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.f_Resas_OLV.resources
-C:\Users\rvale_000\documents\visual studio 2015\Projects\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.f_Connex.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\PPE_ABAS.exe.config
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\PPE_ABAS.exe
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\PPE_ABAS.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\Dapper.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\MySql.Data.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\Dapper.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.csprojResolveAssemblyReference.cache
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.Properties.Resources.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.csproj.GenerateResource.Cache
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.exe
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\ObjectListView.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\bin\Debug\ObjectListView.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FAddResa.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FConnex.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FMainMenu.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FQuickSwitch.resources

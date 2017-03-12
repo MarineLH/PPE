@@ -23,5 +23,10 @@ namespace PPE_ABAS
         public string bat_mailcontact { get; set; }
         // bat_libelle
         public string bat_libelle { get; set; }
+
+        public override string ToString()
+        {
+            return this.bat_libelle;
+        }
     }
 }

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PPE_ABAS.Properties
-{
-
-
+namespace PPE_ABAS.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
     /// </summary>
@@ -22,49 +22,365 @@ namespace PPE_ABAS.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PPE_ABAS.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Remplace la propriété CurrentUICulture du thread actuel pour toutes
         ///   les recherches de ressources à l'aide de cette classe de ressource fortement typée.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Fermer.
+        /// </summary>
+        internal static string close {
+            get {
+                return ResourceManager.GetString("close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Bâtiment sélectionné : .
+        /// </summary>
+        internal static string f_add_resa_selected {
+            get {
+                return ResourceManager.GetString("f_add_resa_selected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ajouter une réservation.
+        /// </summary>
+        internal static string f_add_resa_title {
+            get {
+                return ResourceManager.GetString("f_add_resa_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de chambres disponibles : .
+        /// </summary>
+        internal static string f_add_resas_chDispo {
+            get {
+                return ResourceManager.GetString("f_add_resas_chDispo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Chambre sélectionnée : .
+        /// </summary>
+        internal static string f_add_resas_chSelect {
+            get {
+                return ResourceManager.GetString("f_add_resas_chSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Aucune chambre n&apos;a été sélectionnée ! .
+        /// </summary>
+        internal static string f_add_resas_no_ch {
+            get {
+                return ResourceManager.GetString("f_add_resas_no_ch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Vous n&apos;avez pas choisi ou créé de client ! .
+        /// </summary>
+        internal static string f_add_resas_no_client {
+            get {
+                return ResourceManager.GetString("f_add_resas_no_client", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Aucune chambre de ce type disponible dans l&apos;hôtel.
+        /// </summary>
+        internal static string f_add_resas_noDispo {
+            get {
+                return ResourceManager.GetString("f_add_resas_noDispo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à La réservation a bien été enregistrée !.
+        /// </summary>
+        internal static string f_add_resas_success {
+            get {
+                return ResourceManager.GetString("f_add_resas_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Choisissez un bâtiment.
+        /// </summary>
+        internal static string f_connex_select_bat {
+            get {
+                return ResourceManager.GetString("f_connex_select_bat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Choisissez un utilisateur.
+        /// </summary>
+        internal static string f_connex_select_user {
+            get {
+                return ResourceManager.GetString("f_connex_select_user", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Connexion.
+        /// </summary>
+        internal static string f_connex_title {
+            get {
+                return ResourceManager.GetString("f_connex_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ajouter une réservation.
+        /// </summary>
+        internal static string f_main_add {
+            get {
+                return ResourceManager.GetString("f_main_add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Menu principal.
+        /// </summary>
+        internal static string f_main_menu_title {
+            get {
+                return ResourceManager.GetString("f_main_menu_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Changer rapidement de bâtiment.
+        /// </summary>
+        internal static string f_main_quick_select_bat {
+            get {
+                return ResourceManager.GetString("f_main_quick_select_bat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Sélectionner un membre du personnel.
+        /// </summary>
+        internal static string f_quick_sw_select_user {
+            get {
+                return ResourceManager.GetString("f_quick_sw_select_user", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Changer rapidement de bâtiment.
+        /// </summary>
+        internal static string f_quick_sw_title {
+            get {
+                return ResourceManager.GetString("f_quick_sw_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Code Postal.
+        /// </summary>
+        internal static string olvc_adcp {
+            get {
+                return ResourceManager.GetString("olvc_adcp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Adresse.
+        /// </summary>
+        internal static string olvc_adl1 {
+            get {
+                return ResourceManager.GetString("olvc_adl1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ville.
+        /// </summary>
+        internal static string olvc_adville {
+            get {
+                return ResourceManager.GetString("olvc_adville", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Client.
+        /// </summary>
+        internal static string olvc_clientName {
+            get {
+                return ResourceManager.GetString("olvc_clientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Date d&apos;entrée.
+        /// </summary>
+        internal static string olvc_date {
+            get {
+                return ResourceManager.GetString("olvc_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Date de sortie.
+        /// </summary>
+        internal static string olvc_dateSortie {
+            get {
+                return ResourceManager.GetString("olvc_dateSortie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Adresse mail.
+        /// </summary>
+        internal static string olvc_mail {
+            get {
+                return ResourceManager.GetString("olvc_mail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de jours.
+        /// </summary>
+        internal static string olvc_nbJours {
+            get {
+                return ResourceManager.GetString("olvc_nbJours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Chambre.
+        /// </summary>
+        internal static string olvc_numChambre {
+            get {
+                return ResourceManager.GetString("olvc_numChambre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Téléphone.
+        /// </summary>
+        internal static string olvc_tel {
+            get {
+                return ResourceManager.GetString("olvc_tel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Réservations dans tous les hôtels.
+        /// </summary>
+        internal static string olvc_totalChaine {
+            get {
+                return ResourceManager.GetString("olvc_totalChaine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Réservations dans l&apos;hôtel.
+        /// </summary>
+        internal static string olvc_totalHotel {
+            get {
+                return ResourceManager.GetString("olvc_totalHotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Quitter.
+        /// </summary>
+        internal static string quit {
+            get {
+                return ResourceManager.GetString("quit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Succès.
+        /// </summary>
+        internal static string success {
+            get {
+                return ResourceManager.GetString("success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Clients de l&apos;hôtel enregistrés.
+        /// </summary>
+        internal static string tp_clientsHotel {
+            get {
+                return ResourceManager.GetString("tp_clientsHotel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Historique des réservations.
+        /// </summary>
+        internal static string tp_historique {
+            get {
+                return ResourceManager.GetString("tp_historique", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Réservations en cours.
+        /// </summary>
+        internal static string tp_resas_en_cours {
+            get {
+                return ResourceManager.GetString("tp_resas_en_cours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Valider.
+        /// </summary>
+        internal static string val {
+            get {
+                return ResourceManager.GetString("val", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Attention.
+        /// </summary>
+        internal static string warning {
+            get {
+                return ResourceManager.GetString("warning", resourceCulture);
             }
         }
     }

@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,117 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="f_add_resas_chDispo" xml:space="preserve">
+    <value>Nombre de chambres disponibles : </value>
+  </data>
+  <data name="f_add_resas_chSelect" xml:space="preserve">
+    <value>Chambre sélectionnée : </value>
+  </data>
+  <data name="f_add_resas_noDispo" xml:space="preserve">
+    <value>Aucune chambre de ce type disponible dans l'hôtel</value>
+  </data>
+  <data name="f_add_resas_no_ch" xml:space="preserve">
+    <value>Aucune chambre n'a été sélectionnée ! </value>
+  </data>
+  <data name="f_add_resas_no_client" xml:space="preserve">
+    <value>Vous n'avez pas choisi ou créé de client ! </value>
+  </data>
+  <data name="f_add_resas_success" xml:space="preserve">
+    <value>La réservation a bien été enregistrée !</value>
+  </data>
+  <data name="f_add_resa_selected" xml:space="preserve">
+    <value>Bâtiment sélectionné : </value>
+  </data>
+  <data name="f_add_resa_title" xml:space="preserve">
+    <value>Ajouter une réservation</value>
+  </data>
+  <data name="val" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="f_connex_select_bat" xml:space="preserve">
+    <value>Choisissez un bâtiment</value>
+  </data>
+  <data name="f_connex_title" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="f_main_add" xml:space="preserve">
+    <value>Ajouter une réservation</value>
+  </data>
+  <data name="f_main_menu_title" xml:space="preserve">
+    <value>Menu principal</value>
+  </data>
+  <data name="f_main_quick_select_bat" xml:space="preserve">
+    <value>Changer rapidement de bâtiment</value>
+  </data>
+  <data name="olvc_adcp" xml:space="preserve">
+    <value>Code Postal</value>
+  </data>
+  <data name="olvc_adl1" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="olvc_adville" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="olvc_clientName" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="olvc_date" xml:space="preserve">
+    <value>Date d'entrée</value>
+  </data>
+  <data name="olvc_dateSortie" xml:space="preserve">
+    <value>Date de sortie</value>
+  </data>
+  <data name="olvc_mail" xml:space="preserve">
+    <value>Adresse mail</value>
+  </data>
+  <data name="olvc_nbJours" xml:space="preserve">
+    <value>Nombre de jours</value>
+  </data>
+  <data name="olvc_numChambre" xml:space="preserve">
+    <value>Chambre</value>
+  </data>
+  <data name="olvc_tel" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="olvc_totalChaine" xml:space="preserve">
+    <value>Réservations dans tous les hôtels</value>
+  </data>
+  <data name="olvc_totalHotel" xml:space="preserve">
+    <value>Réservations dans l'hôtel</value>
+  </data>
+  <data name="quit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="tp_clientsHotel" xml:space="preserve">
+    <value>Clients de l'hôtel enregistrés</value>
+  </data>
+  <data name="tp_historique" xml:space="preserve">
+    <value>Historique des réservations</value>
+  </data>
+  <data name="tp_resas_en_cours" xml:space="preserve">
+    <value>Réservations en cours</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="f_connex_select_user" xml:space="preserve">
+    <value>Choisissez un utilisateur</value>
+  </data>
+  <data name="f_quick_sw_select_user" xml:space="preserve">
+    <value>Sélectionner un membre du personnel</value>
+  </data>
+  <data name="f_quick_sw_title" xml:space="preserve">
+    <value>Changer rapidement de bâtiment</value>
+  </data>
 </root>
