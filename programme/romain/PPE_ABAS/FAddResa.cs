@@ -71,6 +71,7 @@ namespace PPE_ABAS
 
         private void cb_existingClients_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Préremplir les champs avec les infos du client sélectionné
             var selectedClient = (Client) cb_existingClients.SelectedItem;
             txt_CliNom.Text = selectedClient.cli_nom;
             txt_CliNom.Tag = selectedClient.cli_id;
@@ -85,6 +86,7 @@ namespace PPE_ABAS
 
         private void rb_createClient_CheckedChanged(object sender, EventArgs e)
         {
+            // Permettre la modification, un nouveau client sera créé
             txt_CliNom.Enabled = true;
             txt_CliNom.Tag = null; // vider le tag pour créer un nouveau client
             txt_CliPrenom.Enabled = true;
@@ -99,6 +101,7 @@ namespace PPE_ABAS
 
         private void rb_searchClient_CheckedChanged(object sender, EventArgs e)
         {
+            // Recherche d'un client, on ne peut pas remplir manuellement les champs.
             cb_existingClients.Enabled = true;
             txt_CliNom.Enabled = false;
             txt_CliPrenom.Enabled = false;
@@ -137,12 +140,16 @@ namespace PPE_ABAS
             txt_resDateSortie.Text = _resDateSortie.ToString("yyyy-MM-dd H:mm:ss");
         }
 
+        /// <summary>
+        /// Algorithme de sélection de chambre.
+        /// </summary>
         private void SelectChambre()
         {
             int count;
-            if (cb_typeChambre.SelectedItem == null) return;
+            if (cb_typeChambre.SelectedItem == null) return; // quitter fonction si aucun type de chambre n'est sélectionné.
             using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
             {
+                // On compte le nombre de chambres dispos
                 dynamic result = connection.Query(
                     SQLQueries.countNbFreeChambres,
                     new
@@ -153,12 +160,14 @@ namespace PPE_ABAS
                         date = dt_resDate.Text
                     }
                 ).Single();
-                count = (int) result.Count;
+                count = result.Count == null ? 0 : (int)result.Count;
             }
+            // il y a au moins une chambre dispo
             if (count > 0)
             {
                 using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
                 {
+                    // On récupère la première de toutes les chambres dispos
                     _selectedChambre = connection.Query<Chambre>(
                         SQLQueries.selectFreeChambres,
                         new
@@ -173,7 +182,7 @@ namespace PPE_ABAS
                 lbl_chambresDispos.Text = Resources.f_add_resas_chDispo + count + " | " +
                                           Resources.f_add_resas_chSelect + _selectedChambre;
             }
-            else
+            else // pas de ch dispo
             {
                 _selectedChambre = null;
                 lbl_chambresDispos.Text = Resources.f_add_resas_noDispo;
@@ -215,7 +224,7 @@ namespace PPE_ABAS
                 };
                 using (MySqlConnection connection = new MySqlConnection(Globals.MySQLConnectionString))
                 {
-                    clientId = connection.Query<int>(SQLQueries.addClient, newC).Single();
+                    clientId = connection.Query<int>(SQLQueries.addClient, newC).Single(); // retourne son id
                 }
             }
 
@@ -236,7 +245,8 @@ namespace PPE_ABAS
                             Client_cli_id = client.cli_id,
                             Chambre_Etage_Hotel_hotel_bat_id = _selectedChambre.Etage_Hotel_hotel_bat_id,
                             Chambre_Etage_etage_id = _selectedChambre.Etage_etage_id,
-                            Chambre_ch_id = _selectedChambre.ch_id
+                            Chambre_ch_id = _selectedChambre.ch_id,
+                            Personnel_pers_id = Globals.selectedUser.pers_id
                         });
 
                         MessageBox.Show(Resources.f_add_resas_success, Resources.success, MessageBoxButtons.OK);
@@ -256,10 +266,29 @@ namespace PPE_ABAS
             }
         }
 
+        /// <summary>
+        /// Ecrit les strings du formulaire.
+        /// </summary>
         private void SetTexts()
         {
-            Text = Resources.f_add_resa_title;
+            Text = lbl_title.Text = Resources.f_add_resa_title;
             lbl_currentHotel.Text = Resources.f_add_resa_selected + Globals.selectedBat;
+            rb_createClient.Text = Resources.f_add_resa_create_cust;
+            rb_searchClient.Text = Resources.f_add_resa_search_cust;
+            lbl_nom.Text = Resources.f_add_resa_nom;
+            lbl_pnom.Text = Resources.f_add_resa_prenom;
+            lbl_tel.Text = Resources.f_add_resa_tel;
+            lbl_mail.Text = Resources.f_add_resa_email;
+            lbl_ad1.Text = Resources.f_add_resa_ad1;
+            lbl_ad2.Text = Resources.f_add_resa_ad2;
+            lbl_cp.Text = Resources.f_add_resa_cp;
+            lbl_ville.Text = Resources.f_add_resa_ville;
+            lbl_date.Text = Resources.f_add_resa_date;
+            lbl_nbNuit.Text = Resources.f_add_resa_nb;
+            lbl_dateSortie.Text = Resources.f_add_resa_dateSortie;
+            lbl_typeC.Text = Resources.f_add_resa_typeC;
+            lbl_typeC.Text = Resources.f_add_resa_nbChambre;
+            bt_validate.Text = Resources.save;
             bt_quit.Text = Resources.close;
         }
     }

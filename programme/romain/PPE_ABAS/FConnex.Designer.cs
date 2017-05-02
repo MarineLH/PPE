@@ -30,10 +30,10 @@
         {
             this.cb_chooseBat = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_chooseUser = new System.Windows.Forms.ComboBox();
             this.lbl_chooseUser = new System.Windows.Forms.Label();
             this.lbl_chooseBat = new System.Windows.Forms.Label();
             this.bt_connex = new System.Windows.Forms.Button();
-            this.cb_chooseUser = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +41,8 @@
             // 
             this.cb_chooseBat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_chooseBat.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cb_chooseBat.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_chooseBat.FormattingEnabled = true;
             this.cb_chooseBat.Location = new System.Drawing.Point(6, 38);
             this.cb_chooseBat.Name = "cb_chooseBat";
@@ -64,6 +66,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resources.f_connex_title";
+            // 
+            // cb_chooseUser
+            // 
+            this.cb_chooseUser.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cb_chooseUser.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_chooseUser.FormattingEnabled = true;
+            this.cb_chooseUser.Location = new System.Drawing.Point(6, 87);
+            this.cb_chooseUser.Name = "cb_chooseUser";
+            this.cb_chooseUser.Size = new System.Drawing.Size(236, 21);
+            this.cb_chooseUser.TabIndex = 1;
             // 
             // lbl_chooseUser
             // 
@@ -90,18 +102,10 @@
             this.bt_connex.Location = new System.Drawing.Point(6, 128);
             this.bt_connex.Name = "bt_connex";
             this.bt_connex.Size = new System.Drawing.Size(236, 23);
-            this.bt_connex.TabIndex = 1;
+            this.bt_connex.TabIndex = 2;
             this.bt_connex.Text = "Resources.f_connex_bt_connex";
             this.bt_connex.UseVisualStyleBackColor = true;
             this.bt_connex.Click += new System.EventHandler(this.bt_connex_Click);
-            // 
-            // cb_chooseUser
-            // 
-            this.cb_chooseUser.FormattingEnabled = true;
-            this.cb_chooseUser.Location = new System.Drawing.Point(6, 87);
-            this.cb_chooseUser.Name = "cb_chooseUser";
-            this.cb_chooseUser.Size = new System.Drawing.Size(236, 21);
-            this.cb_chooseUser.TabIndex = 4;
             // 
             // FConnex
             // 

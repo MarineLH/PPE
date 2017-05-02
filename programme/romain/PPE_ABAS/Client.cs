@@ -32,7 +32,7 @@ namespace PPE_ABAS
 
         public override string ToString()
         {
-            return cli_nom + " " + cli_prenom;
+            return fullName;
         }
 
         public string fullName { get { return cli_prenom + " " + cli_nom; } }

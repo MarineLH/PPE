@@ -15,17 +15,10 @@ namespace PPE_ABAS
 {
     public partial class FQuickSwitch : Form
     {
-        private FMainMenu parent;
 
         public FQuickSwitch()
         {
             InitializeComponent();
-        }
-
-        public FQuickSwitch(FMainMenu parent)
-        {
-            InitializeComponent();
-            this.parent = parent;
         }
 
         private void FQuickSwitch_Load(object sender, EventArgs e)

@@ -11,6 +11,9 @@ namespace PPE_ABAS
     /// </summary>
     public static class SQLQueries
     {
+
+        public static string checkInResa = "UPDATE Reservation SET ReservationStatus_rest_id = 2 WHERE res_id = @id";
+
         /// <summary>
         /// Récupérer la liste des bâtiments pour la combobox de connexion
         /// </summary>
@@ -36,7 +39,8 @@ namespace PPE_ABAS
         /// </summary>
         public static string hotelGetReservations = @"SELECT * FROM Reservation r
                                                     LEFT JOIN Client c on r.Client_cli_id = c.cli_id
-                                                    WHERE DATE(NOW()) <= DATE(res_dateSortie)
+                                                    LEFT JOIN ReservationStatus rs on r.ReservationStatus_rest_id = rs.reservStatus_id
+                                                    WHERE ReservationStatus_rest_id = 1 OR ReservationStatus_rest_id = 2
                                                     AND Chambre_Etage_Hotel_hotel_bat_id = @batId";
 
         /// <summary>
@@ -44,9 +48,13 @@ namespace PPE_ABAS
         /// </summary>
         public static string hotelGetHistorique = @"SELECT * FROM Reservation r
                                                     LEFT JOIN Client c on r.Client_cli_id = c.cli_id
-                                                    WHERE DATE(res_dateSortie) < DATE(NOW())
+                                                    LEFT JOIN ReservationStatus rs on r.ReservationStatus_rest_id = rs.reservStatus_id
+                                                    WHERE ReservationStatus_rest_id = 3 OR ReservationStatus_rest_id = 4   
                                                     AND Chambre_Etage_Hotel_hotel_bat_id = @batId";
 
+        /// <summary>
+        /// Récupérer les clients d'un hôtel particulier, avec le nombre de réservations dans l'hotel, et dans tous les hotels de la chaine
+        /// </summary>
         public static string getClientsByHotel = @"SELECT c.*,
                                                       (SELECT COUNT(res_id)
                                                        FROM Reservation r1
@@ -56,6 +64,13 @@ namespace PPE_ABAS
                                                     FROM Client c RIGHT JOIN Reservation r ON c.cli_id = r.Client_cli_id
                                                     GROUP BY c.cli_id
                                                     HAVING TotalDansHotel <> 0";
+
+        /// <summary>
+        /// Passer une resa à @statut (1= en attente, 2= validée, 3= terminée, 4= annulée)
+        /// </summary>
+        public static string setResaStatut = @"UPDATE Reservation SET
+                                                    ReservationStatus_rest_id = @statut
+                                                    WHERE res_id = @resId";
 
         /// <summary>
         /// Récupère les infos d'un client pour un ID donné
@@ -80,15 +95,20 @@ namespace PPE_ABAS
             INSERT INTO insertedId(id, inserted) VALUES (LAST_INSERT_ID(), NOW());
             SELECT id FROM insertedId ORDER BY inserted DESC LIMIT 1;";
 
+        public static string updateClient = @"UPDATE Client SET
+            cli_nom = @cli_nom, cli_prenom = @cli_prenom, cli_tel = @cli_tel, cli_mail = @cli_mail,
+            cli_adl1 = @cli_adl1, cli_adl2 = @cli_adl2, cli_adcp = @cli_adcp, cli_adville = @cli_adville
+            WHERE cli_id = @cli_id;";
+
         /// <summary>
         /// Ajoute une réservation
         /// </summary>
         public static string addResa = @"
             INSERT INTO Reservation(
                 res_date, res_nbJours, res_dateSortie, Client_cli_id,
-                Chambre_ch_id, Chambre_Etage_etage_id, Chambre_Etage_Hotel_hotel_bat_id)
+                Chambre_ch_id, Chambre_Etage_etage_id, Chambre_Etage_Hotel_hotel_bat_id, ReservationStatus_rest_id, Personnel_pers_id)
             VALUES (@res_date, @res_nbJours, @res_dateSortie, @Client_cli_id,
-                @Chambre_ch_id, @Chambre_Etage_etage_id, @Chambre_Etage_Hotel_hotel_bat_id);";
+                @Chambre_ch_id, @Chambre_Etage_etage_id, @Chambre_Etage_Hotel_hotel_bat_id, 1, @Personnel_pers_id);";
 
         /// <summary>
         /// Récupère la liste des types de chambres
@@ -104,31 +124,37 @@ namespace PPE_ABAS
                 ON Chambre.ch_id = Reservation.Chambre_ch_id
                 AND Chambre.Etage_etage_id = Reservation.Chambre_Etage_etage_id
                 AND Chambre.Etage_Hotel_hotel_bat_id = Reservation.Chambre_Etage_Hotel_hotel_bat_id
-                WHERE Chambre.Etage_Hotel_hotel_bat_id = @batId
-                  AND ch_type_id = @typeId
-                  AND Reservation.res_date IS NULL
-                  OR NOT EXISTS( SELECT 1
-                                  FROM Reservation
-                                  WHERE (res_date > @dateSortie
-                                         OR res_dateSortie< @date
-                                ));";
+               WHERE Chambre.Etage_Hotel_hotel_bat_id = @batId
+                      AND Chambre.TypeChambre_tc_id = @typeId
+                      AND (res_id IS NULL OR res_id NOT IN (SELECT res_id
+                                                            FROM Reservation
+                                                            WHERE
+                                                              ReservationStatus_rest_id IN (1, 2)
+                                                              AND (res_date BETWEEN @date AND @dateSortie
+                                                              OR res_dateSortie BETWEEN @date AND @dateSortie)
+                                                            )
+                      );";
 
         /// <summary>
         /// Récupère la première chambre du résultat du nombre de chambres dispos
         /// </summary>
         public static string selectFreeChambres = @"
-            SELECT * FROM Chambre LEFT JOIN Reservation
-                ON Chambre.ch_id = Reservation.Chambre_ch_id
-                AND Chambre.Etage_etage_id = Reservation.Chambre_Etage_etage_id
-                AND Chambre.Etage_Hotel_hotel_bat_id = Reservation.Chambre_Etage_Hotel_hotel_bat_id
+             SELECT *
+                FROM Chambre
+                  LEFT JOIN Reservation
+                    ON Chambre.ch_id = Reservation.Chambre_ch_id
+                       AND Chambre.Etage_etage_id = Reservation.Chambre_Etage_etage_id
+                       AND Chambre.Etage_Hotel_hotel_bat_id = Reservation.Chambre_Etage_Hotel_hotel_bat_id
                 WHERE Chambre.Etage_Hotel_hotel_bat_id = @batId
-                  AND ch_type_id = @typeId
-                  AND Reservation.res_date IS NULL
-                  OR NOT EXISTS( SELECT 1
-                                  FROM Reservation
-                                  WHERE (res_date > @dateSortie
-                                         OR res_dateSortie< @date
-                                ));";
+                      AND Chambre.TypeChambre_tc_id = @typeId
+                      AND (res_id IS NULL OR res_id NOT IN (SELECT res_id
+                                                            FROM Reservation
+                                                            WHERE
+                                                              ReservationStatus_rest_id IN (1, 2)
+                                                              AND (res_date BETWEEN @date AND @dateSortie
+                                                              OR res_dateSortie BETWEEN @date AND @dateSortie)
+                                                            )
+                      );";
 
         /// <summary>
         /// Récupération d'un client du restaurant avec son cli_id en paramètre

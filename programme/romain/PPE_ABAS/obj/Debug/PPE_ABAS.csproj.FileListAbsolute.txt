@@ -15,3 +15,4 @@ C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FAddRe
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FConnex.resources
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FMainMenu.resources
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FQuickSwitch.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS\PPE_ABAS\obj\Debug\PPE_ABAS.FModCustomer.resources

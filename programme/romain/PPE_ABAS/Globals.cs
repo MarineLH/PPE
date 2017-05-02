@@ -7,7 +7,7 @@ namespace PPE_ABAS
 {
     public static class Globals
     {
-        public static string MySQLConnectionString = "Server=romainvaleye.ovh;Database=abas_db;Uid=abas_user;Pwd=3c51713e-534e-4a1d-bc8e-e51c29d3014e;";
+        public static string MySQLConnectionString = "Server=ms-development.fr;Database=admin_abas;Uid=admin_abasUser;Pwd=vG9neMzz51;";
         public static Batiment selectedBat;
         public static Personnel selectedUser;
 

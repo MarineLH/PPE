@@ -39,6 +39,7 @@
             this.olvc_resa_dateSortie = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvc_resa_clientName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvc_resa_numChambre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvc_resa_status = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tp_historique = new System.Windows.Forms.TabPage();
             this.olv_histo = new BrightIdeasSoftware.ObjectListView();
             this.olvc_histo_date = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -46,6 +47,7 @@
             this.olvc_histo_dateSortie = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvc_histo_client = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvc_histo_chambre = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvc_histo_status = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.tp_clientsHotel = new System.Windows.Forms.TabPage();
             this.olv_clients = new BrightIdeasSoftware.ObjectListView();
             this.olvc_client_clientName = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -63,6 +65,13 @@
             this.batimentTableAdapter = new PPE_ABAS.abas_db_dataSetTableAdapters.BatimentTableAdapter();
             this.bt_addRes = new System.Windows.Forms.Button();
             this.lbl_user = new System.Windows.Forms.Label();
+            this.cm_olvi = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.checkInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.annulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cm_olvi_client = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.modifierLesInformationsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierLesInformationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabs.SuspendLayout();
             this.tp_resas_en_cours.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.olv_resas)).BeginInit();
@@ -72,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.olv_clients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abas_db_dataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.batimentBindingSource)).BeginInit();
+            this.cm_olvi.SuspendLayout();
+            this.cm_olvi_client.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_selectedBat
@@ -119,6 +130,7 @@
             this.olv_resas.AllColumns.Add(this.olvc_resa_dateSortie);
             this.olv_resas.AllColumns.Add(this.olvc_resa_clientName);
             this.olv_resas.AllColumns.Add(this.olvc_resa_numChambre);
+            this.olv_resas.AllColumns.Add(this.olvc_resa_status);
             this.olv_resas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -128,35 +140,38 @@
             this.olvc_resa_nbJours,
             this.olvc_resa_dateSortie,
             this.olvc_resa_clientName,
-            this.olvc_resa_numChambre});
+            this.olvc_resa_numChambre,
+            this.olvc_resa_status});
             this.olv_resas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olv_resas.FullRowSelect = true;
             this.olv_resas.Location = new System.Drawing.Point(3, 33);
             this.olv_resas.Name = "olv_resas";
             this.olv_resas.Size = new System.Drawing.Size(975, 579);
             this.olv_resas.TabIndex = 0;
             this.olv_resas.UseCompatibleStateImageBehavior = false;
             this.olv_resas.View = System.Windows.Forms.View.Details;
+            this.olv_resas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.olv_resas_MouseClick);
             // 
             // olvc_resa_date
             // 
             this.olvc_resa_date.AspectName = "res_date";
             this.olvc_resa_date.Groupable = false;
             this.olvc_resa_date.Text = "Resources.olvc_date";
-            this.olvc_resa_date.Width = 250;
+            this.olvc_resa_date.Width = 160;
             // 
             // olvc_resa_nbJours
             // 
             this.olvc_resa_nbJours.AspectName = "res_nbJours";
             this.olvc_resa_nbJours.Groupable = false;
             this.olvc_resa_nbJours.Text = "Resources.olvc_nbJours";
-            this.olvc_resa_nbJours.Width = 75;
+            this.olvc_resa_nbJours.Width = 120;
             // 
             // olvc_resa_dateSortie
             // 
             this.olvc_resa_dateSortie.AspectName = "res_dateSortie";
             this.olvc_resa_dateSortie.Groupable = false;
             this.olvc_resa_dateSortie.Text = "Resources.olvc_dateSortie";
-            this.olvc_resa_dateSortie.Width = 250;
+            this.olvc_resa_dateSortie.Width = 160;
             // 
             // olvc_resa_clientName
             // 
@@ -168,7 +183,13 @@
             // 
             this.olvc_resa_numChambre.AspectName = "numChambre";
             this.olvc_resa_numChambre.Text = "Resources.olvc_numChambre";
-            this.olvc_resa_numChambre.Width = 100;
+            this.olvc_resa_numChambre.Width = 75;
+            // 
+            // olvc_resa_status
+            // 
+            this.olvc_resa_status.AspectName = "ReservationStatus_rest_id";
+            this.olvc_resa_status.Text = "Resources.olvc_status";
+            this.olvc_resa_status.Width = 75;
             // 
             // tp_historique
             // 
@@ -188,6 +209,7 @@
             this.olv_histo.AllColumns.Add(this.olvc_histo_dateSortie);
             this.olv_histo.AllColumns.Add(this.olvc_histo_client);
             this.olv_histo.AllColumns.Add(this.olvc_histo_chambre);
+            this.olv_histo.AllColumns.Add(this.olvc_histo_status);
             this.olv_histo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -197,8 +219,10 @@
             this.olvc_histo_nbJours,
             this.olvc_histo_dateSortie,
             this.olvc_histo_client,
-            this.olvc_histo_chambre});
+            this.olvc_histo_chambre,
+            this.olvc_histo_status});
             this.olv_histo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olv_histo.FullRowSelect = true;
             this.olv_histo.Location = new System.Drawing.Point(3, 33);
             this.olv_histo.Name = "olv_histo";
             this.olv_histo.Size = new System.Drawing.Size(975, 579);
@@ -211,21 +235,21 @@
             this.olvc_histo_date.AspectName = "res_date";
             this.olvc_histo_date.Groupable = false;
             this.olvc_histo_date.Text = "Resources.olvc_date";
-            this.olvc_histo_date.Width = 250;
+            this.olvc_histo_date.Width = 160;
             // 
             // olvc_histo_nbJours
             // 
             this.olvc_histo_nbJours.AspectName = "res_nbJours";
             this.olvc_histo_nbJours.Groupable = false;
             this.olvc_histo_nbJours.Text = "Resources.olvc_nbJours";
-            this.olvc_histo_nbJours.Width = 75;
+            this.olvc_histo_nbJours.Width = 120;
             // 
             // olvc_histo_dateSortie
             // 
             this.olvc_histo_dateSortie.AspectName = "res_dateSortie";
             this.olvc_histo_dateSortie.Groupable = false;
             this.olvc_histo_dateSortie.Text = "Resources.olvc_dateSortie";
-            this.olvc_histo_dateSortie.Width = 250;
+            this.olvc_histo_dateSortie.Width = 160;
             // 
             // olvc_histo_client
             // 
@@ -237,7 +261,13 @@
             // 
             this.olvc_histo_chambre.AspectName = "numChambre";
             this.olvc_histo_chambre.Text = "Resources.olvc_numChambre";
-            this.olvc_histo_chambre.Width = 100;
+            this.olvc_histo_chambre.Width = 75;
+            // 
+            // olvc_histo_status
+            // 
+            this.olvc_histo_status.AspectName = "ReservationStatus_rest_id";
+            this.olvc_histo_status.Text = "Resources.olvc_status";
+            this.olvc_histo_status.Width = 75;
             // 
             // tp_clientsHotel
             // 
@@ -273,53 +303,58 @@
             this.olvc_client_totalHotel,
             this.olvc_client_totalChaine});
             this.olv_clients.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olv_clients.FullRowSelect = true;
             this.olv_clients.Location = new System.Drawing.Point(3, 33);
+            this.olv_clients.MultiSelect = false;
             this.olv_clients.Name = "olv_clients";
+            this.olv_clients.ShowSortIndicators = false;
             this.olv_clients.Size = new System.Drawing.Size(975, 579);
+            this.olv_clients.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.olv_clients.TabIndex = 1;
             this.olv_clients.UseCompatibleStateImageBehavior = false;
             this.olv_clients.View = System.Windows.Forms.View.Details;
+            this.olv_clients.MouseClick += new System.Windows.Forms.MouseEventHandler(this.olv_clients_MouseClick);
             // 
             // olvc_client_clientName
             // 
             this.olvc_client_clientName.AspectName = "fullName";
             this.olvc_client_clientName.Groupable = false;
             this.olvc_client_clientName.Text = "Resources.olvc_clientName";
-            this.olvc_client_clientName.Width = 74;
+            this.olvc_client_clientName.Width = 120;
             // 
             // olvc_client_adl1
             // 
             this.olvc_client_adl1.AspectName = "cli_adl1";
             this.olvc_client_adl1.Groupable = false;
             this.olvc_client_adl1.Text = "Resources.olvc_adl1";
-            this.olvc_client_adl1.Width = 58;
+            this.olvc_client_adl1.Width = 150;
             // 
             // olvc_client_adcp
             // 
             this.olvc_client_adcp.AspectName = "cli_adcp";
             this.olvc_client_adcp.Groupable = false;
             this.olvc_client_adcp.Text = "Resources.olvc_adcp";
-            this.olvc_client_adcp.Width = 155;
+            this.olvc_client_adcp.Width = 80;
             // 
             // olvc_client_adville
             // 
             this.olvc_client_adville.AspectName = "cli_adville";
             this.olvc_client_adville.Text = "Resources.olvc_adville";
-            this.olvc_client_adville.Width = 154;
+            this.olvc_client_adville.Width = 80;
             // 
             // olvc_client_tel
             // 
             this.olvc_client_tel.AspectName = "cli_tel";
             this.olvc_client_tel.Groupable = false;
             this.olvc_client_tel.Text = "Resources.olvc_tel";
-            this.olvc_client_tel.Width = 64;
+            this.olvc_client_tel.Width = 110;
             // 
             // olvc_client_mail
             // 
             this.olvc_client_mail.AspectName = "cli_mail";
             this.olvc_client_mail.Groupable = false;
             this.olvc_client_mail.Text = "Resources.olvc_mail";
-            this.olvc_client_mail.Width = 56;
+            this.olvc_client_mail.Width = 120;
             // 
             // olvc_client_totalHotel
             // 
@@ -333,7 +368,7 @@
             this.olvc_client_totalChaine.AspectName = "TotalChaineHotels";
             this.olvc_client_totalChaine.Groupable = false;
             this.olvc_client_totalChaine.Text = "Resources.olvc_totalChaine";
-            this.olvc_client_totalChaine.Width = 194;
+            this.olvc_client_totalChaine.Width = 50;
             // 
             // bt_quit
             // 
@@ -393,6 +428,61 @@
             this.lbl_user.TabIndex = 4;
             this.lbl_user.Text = "Globals.selectedUser.ToString()\r\n";
             // 
+            // cm_olvi
+            // 
+            this.cm_olvi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkInToolStripMenuItem,
+            this.checkOutToolStripMenuItem,
+            this.annulerToolStripMenuItem});
+            this.cm_olvi.Name = "cm_olv";
+            this.cm_olvi.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.cm_olvi.Size = new System.Drawing.Size(131, 70);
+            // 
+            // checkInToolStripMenuItem
+            // 
+            this.checkInToolStripMenuItem.Image = global::PPE_ABAS.Properties.Resources.sign_in;
+            this.checkInToolStripMenuItem.Name = "checkInToolStripMenuItem";
+            this.checkInToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.checkInToolStripMenuItem.Text = "Check In";
+            this.checkInToolStripMenuItem.Click += new System.EventHandler(this.checkInToolStripMenuItem_Click);
+            // 
+            // checkOutToolStripMenuItem
+            // 
+            this.checkOutToolStripMenuItem.Image = global::PPE_ABAS.Properties.Resources.sign_out_option;
+            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.checkOutToolStripMenuItem.Text = "Check Out";
+            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
+            // 
+            // annulerToolStripMenuItem
+            // 
+            this.annulerToolStripMenuItem.Image = global::PPE_ABAS.Properties.Resources.remove_symbol;
+            this.annulerToolStripMenuItem.Name = "annulerToolStripMenuItem";
+            this.annulerToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.annulerToolStripMenuItem.Text = "Annuler";
+            this.annulerToolStripMenuItem.Click += new System.EventHandler(this.annulerToolStripMenuItem_Click);
+            // 
+            // cm_olvi_client
+            // 
+            this.cm_olvi_client.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifierLesInformationsToolStripMenuItem1});
+            this.cm_olvi_client.Name = "cm_olvi_client";
+            this.cm_olvi_client.Size = new System.Drawing.Size(208, 26);
+            // 
+            // modifierLesInformationsToolStripMenuItem1
+            // 
+            this.modifierLesInformationsToolStripMenuItem1.Name = "modifierLesInformationsToolStripMenuItem1";
+            this.modifierLesInformationsToolStripMenuItem1.Size = new System.Drawing.Size(207, 22);
+            this.modifierLesInformationsToolStripMenuItem1.Text = "Modifier les informations";
+            this.modifierLesInformationsToolStripMenuItem1.Click += new System.EventHandler(this.modifierLesInformationsToolStripMenuItem_Click);
+            // 
+            // modifierLesInformationsToolStripMenuItem
+            // 
+            this.modifierLesInformationsToolStripMenuItem.Name = "modifierLesInformationsToolStripMenuItem";
+            this.modifierLesInformationsToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.modifierLesInformationsToolStripMenuItem.Text = "Modifier les informations";
+            this.modifierLesInformationsToolStripMenuItem.Click += new System.EventHandler(this.modifierLesInformationsToolStripMenuItem_Click);
+            // 
             // FMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -420,6 +510,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.olv_clients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abas_db_dataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.batimentBindingSource)).EndInit();
+            this.cm_olvi.ResumeLayout(false);
+            this.cm_olvi_client.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,5 +552,14 @@
         private BrightIdeasSoftware.OLVColumn olvc_histo_chambre;
         private System.Windows.Forms.Button bt_addRes;
         private System.Windows.Forms.Label lbl_user;
+        private System.Windows.Forms.ContextMenuStrip cm_olvi;
+        private System.Windows.Forms.ToolStripMenuItem checkInToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem annulerToolStripMenuItem;
+        private BrightIdeasSoftware.OLVColumn olvc_resa_status;
+        private BrightIdeasSoftware.OLVColumn olvc_histo_status;
+        private System.Windows.Forms.ContextMenuStrip cm_olvi_client;
+        private System.Windows.Forms.ToolStripMenuItem modifierLesInformationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierLesInformationsToolStripMenuItem1;
     }
 }

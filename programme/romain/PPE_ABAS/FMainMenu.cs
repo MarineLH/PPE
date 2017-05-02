@@ -63,7 +63,6 @@ namespace PPE_ABAS
 
         public void SetBatimentInfos()
         {
-            lbl_selectedBat.Text = Globals.selectedBat.ToString();
 
             using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
             {
@@ -72,16 +71,27 @@ namespace PPE_ABAS
                 var queryClients = SQLQueries.getClientsByHotel;
 
                 // update resas en cours
-                this.HotelResasEnCours = connection.Query<Reservation, Client, Reservation>(queryResa, (laResa, sonClient) => 
-                    { laResa.Client_cli_id = sonClient; return laResa; }, 
+                this.HotelResasEnCours = connection.Query<Reservation, Client, ReservationStatus, Reservation>(
+                    queryResa, 
+                    (laResa, sonClient, sonStatut) => {
+                        laResa.Client_cli_id = sonClient;
+                        laResa.ReservationStatus_rest_id = sonStatut;
+                        return laResa;
+                    }, 
                     new { batId = Globals.selectedBat.bat_id }, 
-                    splitOn: "Client_cli_id");
+                    splitOn: "Client_cli_id, reservStatus_id");
 
                 // update historique
-                this.HotelHistorique = connection.Query<Reservation, Client, Reservation>(queryHisto, (laResa, sonClient) => 
-                    { laResa.Client_cli_id = sonClient; return laResa; }, 
+                this.HotelHistorique = connection.Query<Reservation, Client, ReservationStatus, Reservation>(
+                    queryHisto,
+                    (laResa, sonClient, sonStatut) =>
+                    {
+                        laResa.Client_cli_id = sonClient;
+                        laResa.ReservationStatus_rest_id = sonStatut;
+                        return laResa;
+                    }, 
                     new { batId = Globals.selectedBat.bat_id }, 
-                    splitOn: "Client_cli_id");
+                    splitOn: "Client_cli_id, reservStatus_id");
 
                 /* ANCIENNE METHODE
                 histo = connection.Query<Reservation>(queryHisto, new { batId = Globals.selectedBat.bat_id });
@@ -96,6 +106,7 @@ namespace PPE_ABAS
             }
 
             UpdateOlVs();
+            SetTexts();
         }
 
         private void UpdateOlVs()
@@ -114,6 +125,116 @@ namespace PPE_ABAS
         {
             Form fAddResa = new FAddResa(this);
             fAddResa.ShowDialog(this);
+        }
+
+        private void checkInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resa = getSelectedReservation(sender);
+            if (resa == null)
+            {
+                return;
+            }
+            using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
+            {
+                connection.Execute(SQLQueries.setResaStatut, new { statut = 2, resId = resa.res_id});
+            }
+            SetBatimentInfos();
+        }
+
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resa = getSelectedReservation(sender);
+            if (resa == null)
+            {
+                return;
+            }
+            using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
+            {
+                connection.Execute(SQLQueries.setResaStatut, new { statut = 3, resId = resa.res_id });
+            }
+            SetBatimentInfos();
+        }
+
+        private void annulerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resa = getSelectedReservation(sender);
+            if (resa == null)
+            {
+                return;
+            }
+            using (var connection = new MySqlConnection(Globals.MySQLConnectionString))
+            {
+                connection.Execute(SQLQueries.setResaStatut, new { statut = 4, resId = resa.res_id });
+            }
+            SetBatimentInfos();
+        }
+
+        private static Reservation getSelectedReservation(object sender)
+        {
+            Reservation resa;
+            try
+            {
+                resa =
+                    (Reservation)
+                    ((BrightIdeasSoftware.ObjectListView)
+                        ((ContextMenuStrip) ((ToolStripItem) sender).GetCurrentParent()).SourceControl).SelectedItem
+                    .RowObject;
+            }
+            catch (Exception exception)
+            {
+                resa = null;
+            }
+            return resa;
+        }
+
+        private void olv_resas_MouseClick(object sender, MouseEventArgs e)
+        {
+            bool match = false;
+
+            if (e.Button == MouseButtons.Right)
+            {
+                if (olv_resas.FocusedItem.Bounds.Contains(e.Location))
+                {
+                    cm_olvi.Show(olv_resas, new Point(e.X, e.Y));
+                }
+            }
+        }
+
+        private void olv_clients_MouseClick(object sender, MouseEventArgs e)
+        {
+            bool match = false;
+
+            if (e.Button == MouseButtons.Right)
+            {
+                if (olv_clients.FocusedItem.Bounds.Contains(e.Location))
+                {
+                    cm_olvi_client.Show(olv_clients, new Point(e.X, e.Y));
+                }
+            }
+        }
+
+        private void modifierLesInformationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Client client;
+            try
+            {
+                client =
+                    (Client)
+                    ((BrightIdeasSoftware.ObjectListView)
+                        ((ContextMenuStrip)((ToolStripItem)sender).GetCurrentParent()).SourceControl).SelectedItem
+                    .RowObject;
+            }
+            catch (Exception exception)
+            {
+                client = null;
+            }
+
+            if (client != null)
+            {
+                var FMod = new FModCustomer(client);
+                FMod.ShowDialog(this);
+                SetBatimentInfos();
+            }
         }
 
         private void SetTexts()
@@ -135,6 +256,7 @@ namespace PPE_ABAS
             olvc_resa_nbJours.Text = Resources.olvc_nbJours;
             olvc_resa_dateSortie.Text = Resources.olvc_dateSortie;
             olvc_resa_numChambre.Text = Resources.olvc_numChambre;
+            olvc_resa_status.Text = Resources.olvc_status;
 
             // OLVC Histo
             olvc_histo_client.Text = Resources.olvc_clientName;
@@ -142,6 +264,7 @@ namespace PPE_ABAS
             olvc_histo_nbJours.Text = Resources.olvc_nbJours;
             olvc_histo_dateSortie.Text = Resources.olvc_dateSortie;
             olvc_histo_chambre.Text = Resources.olvc_numChambre;
+            olvc_histo_status.Text = Resources.olvc_status;
 
             // OLVC client
             olvc_client_clientName.Text = Resources.olvc_clientName;

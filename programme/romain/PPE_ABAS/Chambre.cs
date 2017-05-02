@@ -14,7 +14,7 @@ namespace PPE_ABAS
         // ch_id
         public int ch_id { get; set; }
         // ch_type_id
-        public int ch_type_id { get; set; }
+        public int TypeChambre_tc_id { get; set; }
 
         public override string ToString()
         {

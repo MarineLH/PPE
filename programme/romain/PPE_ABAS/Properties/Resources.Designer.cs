@@ -70,6 +70,123 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Une erreur est survenue..
+        /// </summary>
+        internal static string error_occured {
+            get {
+                return ResourceManager.GetString("error_occured", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Adresse : .
+        /// </summary>
+        internal static string f_add_resa_ad1 {
+            get {
+                return ResourceManager.GetString("f_add_resa_ad1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Complément : .
+        /// </summary>
+        internal static string f_add_resa_ad2 {
+            get {
+                return ResourceManager.GetString("f_add_resa_ad2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Code postal : .
+        /// </summary>
+        internal static string f_add_resa_cp {
+            get {
+                return ResourceManager.GetString("f_add_resa_cp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Créer un client.
+        /// </summary>
+        internal static string f_add_resa_create_cust {
+            get {
+                return ResourceManager.GetString("f_add_resa_create_cust", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Date : .
+        /// </summary>
+        internal static string f_add_resa_date {
+            get {
+                return ResourceManager.GetString("f_add_resa_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Sortie : .
+        /// </summary>
+        internal static string f_add_resa_dateSortie {
+            get {
+                return ResourceManager.GetString("f_add_resa_dateSortie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Email : .
+        /// </summary>
+        internal static string f_add_resa_email {
+            get {
+                return ResourceManager.GetString("f_add_resa_email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de nuits : .
+        /// </summary>
+        internal static string f_add_resa_nb {
+            get {
+                return ResourceManager.GetString("f_add_resa_nb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nombre de chambres disponibles : .
+        /// </summary>
+        internal static string f_add_resa_nbChambre {
+            get {
+                return ResourceManager.GetString("f_add_resa_nbChambre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Nom * :.
+        /// </summary>
+        internal static string f_add_resa_nom {
+            get {
+                return ResourceManager.GetString("f_add_resa_nom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Prénom : .
+        /// </summary>
+        internal static string f_add_resa_prenom {
+            get {
+                return ResourceManager.GetString("f_add_resa_prenom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Chercher un client existant.
+        /// </summary>
+        internal static string f_add_resa_search_cust {
+            get {
+                return ResourceManager.GetString("f_add_resa_search_cust", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Bâtiment sélectionné : .
         /// </summary>
         internal static string f_add_resa_selected {
@@ -79,11 +196,38 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Téléphone :.
+        /// </summary>
+        internal static string f_add_resa_tel {
+            get {
+                return ResourceManager.GetString("f_add_resa_tel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Ajouter une réservation.
         /// </summary>
         internal static string f_add_resa_title {
             get {
                 return ResourceManager.GetString("f_add_resa_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Type de chambre : .
+        /// </summary>
+        internal static string f_add_resa_typeC {
+            get {
+                return ResourceManager.GetString("f_add_resa_typeC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Ville : .
+        /// </summary>
+        internal static string f_add_resa_ville {
+            get {
+                return ResourceManager.GetString("f_add_resa_ville", resourceCulture);
             }
         }
         
@@ -142,6 +286,33 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Vous n&apos;avez sélectionné aucun bâtiment !.
+        /// </summary>
+        internal static string f_connex_no_bat {
+            get {
+                return ResourceManager.GetString("f_connex_no_bat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Vous devez sélectionner un bâtiment et un membre du personnel !.
+        /// </summary>
+        internal static string f_connex_no_both {
+            get {
+                return ResourceManager.GetString("f_connex_no_both", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Vous devez sélectionner un membre du personnel !.
+        /// </summary>
+        internal static string f_connex_no_pers {
+            get {
+                return ResourceManager.GetString("f_connex_no_pers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Choisissez un bâtiment.
         /// </summary>
         internal static string f_connex_select_bat {
@@ -196,6 +367,15 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Modifier le client n°.
+        /// </summary>
+        internal static string f_mod_cust_title {
+            get {
+                return ResourceManager.GetString("f_mod_cust_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Sélectionner un membre du personnel.
         /// </summary>
         internal static string f_quick_sw_select_user {
@@ -210,6 +390,25 @@ namespace PPE_ABAS.Properties {
         internal static string f_quick_sw_title {
             get {
                 return ResourceManager.GetString("f_quick_sw_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap font_selection_editor {
+            get {
+                object obj = ResourceManager.GetObject("font_selection_editor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à La modification a bien été enregistrée..
+        /// </summary>
+        internal static string modif_success {
+            get {
+                return ResourceManager.GetString("modif_success", resourceCulture);
             }
         }
         
@@ -295,6 +494,15 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à État.
+        /// </summary>
+        internal static string olvc_status {
+            get {
+                return ResourceManager.GetString("olvc_status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Téléphone.
         /// </summary>
         internal static string olvc_tel {
@@ -304,7 +512,7 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Réservations dans tous les hôtels.
+        ///   Recherche une chaîne localisée semblable à Nb Total.
         /// </summary>
         internal static string olvc_totalChaine {
             get {
@@ -313,7 +521,7 @@ namespace PPE_ABAS.Properties {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Réservations dans l&apos;hôtel.
+        ///   Recherche une chaîne localisée semblable à Nb réservations dans l&apos;hôtel.
         /// </summary>
         internal static string olvc_totalHotel {
             get {
@@ -327,6 +535,45 @@ namespace PPE_ABAS.Properties {
         internal static string quit {
             get {
                 return ResourceManager.GetString("quit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_symbol {
+            get {
+                object obj = ResourceManager.GetObject("remove_symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Enregistrer.
+        /// </summary>
+        internal static string save {
+            get {
+                return ResourceManager.GetString("save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_in {
+            get {
+                object obj = ResourceManager.GetObject("sign_in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_out_option {
+            get {
+                object obj = ResourceManager.GetObject("sign_out_option", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

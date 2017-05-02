@@ -46,26 +46,26 @@ namespace PPE_ABAS
         private void bt_connex_Click(object sender, EventArgs e)
         {
             bool continuer = true;
-            string message = "Une erreur est survenue";
+            string message = Resources.error_occured;
             if (null == cb_chooseBat.SelectedItem && null == cb_chooseUser.SelectedItem)
             {
                 continuer = false;
-                message = "Vous devez choisir un bâtiment et un membre du personnel !";
+                message = Resources.f_connex_no_both;
             }
             else if (null == cb_chooseBat.SelectedItem && null != cb_chooseUser.SelectedItem)
             {
                 continuer = false;
-                message = "Vous devez choisir un bâtiment !";
+                message = Resources.f_connex_no_bat;
             }
             else if (null != cb_chooseBat.SelectedItem && null == cb_chooseUser.SelectedItem)
             {
                 continuer = false;
-                message = "Vous devez choisir un membre du personnel !";
+                message = Resources.f_connex_no_pers;
             }
 
             if (!continuer)
             {
-                MessageBox.Show(message, "Attention", MessageBoxButtons.OK);
+                MessageBox.Show(message, Resources.warning, MessageBoxButtons.OK);
                 return;
             }
 
@@ -82,8 +82,7 @@ namespace PPE_ABAS
 
         private void SetTexts()
         {
-            this.Text = Resources.f_connex_title;
-            groupBox1.Text = Resources.f_connex_title;
+            this.Text = groupBox1.Text = Resources.f_connex_title;
             lbl_chooseBat.Text = Resources.f_connex_select_bat;
             lbl_chooseUser.Text = Resources.f_connex_select_user;
             bt_connex.Text = Resources.val;
