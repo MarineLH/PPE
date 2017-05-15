@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="f_add_resas_chDispo" xml:space="preserve">
+    <value>Nombre de chambres disponibles : </value>
+  </data>
+  <data name="f_add_resas_chSelect" xml:space="preserve">
+    <value>Chambre sélectionnée : </value>
+  </data>
+  <data name="f_add_resas_noDispo" xml:space="preserve">
+    <value>Aucune chambre de ce type disponible dans l'hôtel</value>
+  </data>
+  <data name="f_add_resas_no_ch" xml:space="preserve">
+    <value>Aucune chambre n'a été sélectionnée ! </value>
+  </data>
+  <data name="f_add_resas_no_client" xml:space="preserve">
+    <value>Vous n'avez pas choisi ou créé de client ! </value>
+  </data>
+  <data name="f_add_resas_success" xml:space="preserve">
+    <value>La réservation a bien été enregistrée !</value>
+  </data>
+  <data name="f_add_resa_selected" xml:space="preserve">
+    <value>Bâtiment sélectionné : </value>
+  </data>
+  <data name="f_add_resa_title" xml:space="preserve">
+    <value>Ajouter une réservation</value>
+  </data>
+  <data name="val" xml:space="preserve">
+    <value>Valider</value>
+  </data>
+  <data name="f_connex_select_bat" xml:space="preserve">
+    <value>Choisissez un bâtiment</value>
+  </data>
+  <data name="f_connex_title" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="f_main_add" xml:space="preserve">
+    <value>Ajouter une réservation</value>
+  </data>
+  <data name="f_main_menu_title" xml:space="preserve">
+    <value>Menu principal</value>
+  </data>
+  <data name="f_main_quick_select_bat" xml:space="preserve">
+    <value>Changer rapidement de bâtiment</value>
+  </data>
+  <data name="olvc_adcp" xml:space="preserve">
+    <value>Code Postal</value>
+  </data>
+  <data name="olvc_adl1" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="olvc_adville" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="olvc_clientName" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="olvc_date" xml:space="preserve">
+    <value>Date d'entrée</value>
+  </data>
+  <data name="olvc_dateSortie" xml:space="preserve">
+    <value>Date de sortie</value>
+  </data>
+  <data name="olvc_mail" xml:space="preserve">
+    <value>Adresse mail</value>
+  </data>
+  <data name="olvc_nbJours" xml:space="preserve">
+    <value>Nombre de jours</value>
+  </data>
+  <data name="olvc_numChambre" xml:space="preserve">
+    <value>Chambre</value>
+  </data>
+  <data name="olvc_tel" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="olvc_totalChaine" xml:space="preserve">
+    <value>Nb Total</value>
+  </data>
+  <data name="olvc_totalHotel" xml:space="preserve">
+    <value>Nb réservations dans l'hôtel</value>
+  </data>
+  <data name="quit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Succès</value>
+  </data>
+  <data name="tp_clientsHotel" xml:space="preserve">
+    <value>Clients de l'hôtel enregistrés</value>
+  </data>
+  <data name="tp_historique" xml:space="preserve">
+    <value>Historique des réservations</value>
+  </data>
+  <data name="tp_resas_en_cours" xml:space="preserve">
+    <value>Réservations en cours</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="f_connex_select_user" xml:space="preserve">
+    <value>Choisissez un utilisateur</value>
+  </data>
+  <data name="f_quick_sw_select_user" xml:space="preserve">
+    <value>Sélectionner un membre du personnel</value>
+  </data>
+  <data name="f_quick_sw_title" xml:space="preserve">
+    <value>Changer rapidement de bâtiment</value>
+  </data>
+  <data name="olvc_status" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="f_add_resa_ad1" xml:space="preserve">
+    <value>Adresse : </value>
+  </data>
+  <data name="f_add_resa_ad2" xml:space="preserve">
+    <value>Complément : </value>
+  </data>
+  <data name="f_add_resa_cp" xml:space="preserve">
+    <value>Code postal : </value>
+  </data>
+  <data name="f_add_resa_create_cust" xml:space="preserve">
+    <value>Créer un client</value>
+  </data>
+  <data name="f_add_resa_date" xml:space="preserve">
+    <value>Date : </value>
+  </data>
+  <data name="f_add_resa_dateSortie" xml:space="preserve">
+    <value>Sortie : </value>
+  </data>
+  <data name="f_add_resa_email" xml:space="preserve">
+    <value>Email : </value>
+  </data>
+  <data name="f_add_resa_nb" xml:space="preserve">
+    <value>Nombre de nuits : </value>
+  </data>
+  <data name="f_add_resa_nbChambre" xml:space="preserve">
+    <value>Nombre de chambres disponibles : </value>
+  </data>
+  <data name="f_add_resa_nom" xml:space="preserve">
+    <value>Nom * :</value>
+  </data>
+  <data name="f_add_resa_prenom" xml:space="preserve">
+    <value>Prénom : </value>
+  </data>
+  <data name="f_add_resa_search_cust" xml:space="preserve">
+    <value>Chercher un client existant</value>
+  </data>
+  <data name="f_add_resa_tel" xml:space="preserve">
+    <value>Téléphone :</value>
+  </data>
+  <data name="f_add_resa_typeC" xml:space="preserve">
+    <value>Type de chambre : </value>
+  </data>
+  <data name="f_add_resa_ville" xml:space="preserve">
+    <value>Ville : </value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="f_mod_cust_title" xml:space="preserve">
+    <value>Modifier le client n°</value>
+  </data>
+  <data name="error_occured" xml:space="preserve">
+    <value>Une erreur est survenue.</value>
+  </data>
+  <data name="f_connex_no_bat" xml:space="preserve">
+    <value>Vous n'avez sélectionné aucun bâtiment !</value>
+  </data>
+  <data name="f_connex_no_both" xml:space="preserve">
+    <value>Vous devez sélectionner un bâtiment et un membre du personnel !</value>
+  </data>
+  <data name="f_connex_no_pers" xml:space="preserve">
+    <value>Vous devez sélectionner un membre du personnel !</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="font_selection_editor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font-selection-editor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="modif_success" xml:space="preserve">
+    <value>La modification a bien été enregistrée.</value>
+  </data>
+  <data name="remove_symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sign_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sign_out_option" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-out-option.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="resa_already_checkin" xml:space="preserve">
+    <value>La réservation est déjà validée !</value>
+  </data>
+  <data name="resa_must_checkin" xml:space="preserve">
+    <value>La réservation doit d'abord être validée !</value>
+  </data>
+</root>

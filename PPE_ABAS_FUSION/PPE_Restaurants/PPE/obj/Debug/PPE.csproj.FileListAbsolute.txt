@@ -1,0 +1,12 @@
+e:\users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\PPE.exe.config
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.csprojResolveAssemblyReference.cache
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE_ABAS.Form1.resources
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.Properties.Resources.resources
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.csproj.GenerateResource.Cache
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\PPE.exe
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\PPE.pdb
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\Dapper.dll
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\MySql.Data.dll
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\Dapper.xml
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.exe
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.pdb

@@ -1,0 +1,49 @@
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\PPE.exe.config
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\PPE.exe
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\PPE.pdb
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\Dapper.dll
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\bin\Debug\Dapper.xml
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE_ABAS.Form1.resources
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE_ABAS.csproj.GenerateResource.Cache
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.exe
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE.pdb
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE_ABAS.csprojResolveAssemblyReference.cache
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE_ABAS.mainForm.resources
+e:\Users\sebastien\documents\visual studio 2015\Projects\PPE\PPE\obj\Debug\PPE_ABAS.Properties.Resources.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\PPE.exe.config
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\PPE.exe
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\PPE.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\Dapper.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\Dapper.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.authenticationForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.Form1.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.mainForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.Properties.Resources.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.csproj.GenerateResource.Cache
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE.exe
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.csprojResolveAssemblyReference.cache
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\bin\Debug\PPE.exe.config
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE.exe
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE.pdb
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\bin\Debug\PPE.exe
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\bin\Debug\PPE.pdb
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\bin\Debug\Dapper.dll
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\bin\Debug\Dapper.xml
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.csprojResolveAssemblyReference.cache
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.authenticationForm.resources
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.Form1.resources
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.mainForm.resources
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.Properties.Resources.resources
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.csproj.GenerateResource.Cache
+C:\Users\sebastien\Desktop\Dev\PPE-Perso\PPE\obj\Debug\PPE_ABAS.modifyForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.modifyForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.WinForms.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.Wpf.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.WinForms.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.WinForms.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.Wpf.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.Wpf.xml

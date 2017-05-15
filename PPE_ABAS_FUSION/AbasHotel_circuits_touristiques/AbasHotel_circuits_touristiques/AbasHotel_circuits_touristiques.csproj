@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{083D4A75-5167-4A0A-B7BD-D79FC9C9C348}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PPE_ABAS_Circuits</RootNamespace>
+    <AssemblyName>AbasHotel_circuits_touristiques</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CircuitChauffeur.cs" />
+    <Compile Include="Microsoft\VisualBasic\Information.cs" />
+    <Compile Include="reserver_vehicule_circuit.cs" />
+    <Compile Include="cir_etape.cs" />
+    <Compile Include="CircuitVehicule.cs" />
+    <Compile Include="CircuitTypeVehicule.cs" />
+    <Compile Include="CircuitStatutEtape.cs" />
+    <Compile Include="CircuitStatutChauffeur.cs" />
+    <Compile Include="CircuitEtape.cs" />
+    <Compile Include="f_Connex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_Connex.Designer.cs">
+      <DependentUpon>f_Connex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Batiment.cs" />
+    <Compile Include="Chambre.cs" />
+    <Compile Include="CircuitTouristique.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Domaine.cs" />
+    <Compile Include="Etage.cs" />
+    <Compile Include="Facture.cs" />
+    <Compile Include="f_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_main.Designer.cs">
+      <DependentUpon>f_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="habiliter.cs" />
+    <Compile Include="Hotel.cs" />
+    <Compile Include="Personnel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResClient.cs" />
+    <Compile Include="Reservation.cs" />
+    <Compile Include="reserverRestaurant.cs" />
+    <Compile Include="Restaurant.cs" />
+    <Compile Include="SQLQueries.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TVA.cs" />
+    <Compile Include="Voiture.cs" />
+    <EmbeddedResource Include="f_Connex.resx">
+      <DependentUpon>f_Connex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_main.resx">
+      <DependentUpon>f_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

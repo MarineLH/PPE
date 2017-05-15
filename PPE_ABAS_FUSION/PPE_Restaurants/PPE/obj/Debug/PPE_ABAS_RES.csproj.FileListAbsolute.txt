@@ -1,0 +1,44 @@
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\PPE.exe.config
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\PPE.exe
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\PPE.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\Dapper.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.WinForms.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.Wpf.dll
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\Dapper.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.WinForms.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.WinForms.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.Wpf.pdb
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\bin\Debug\LiveCharts.Wpf.xml
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS_RES.authenticationForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS_RES.Form1.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS_RES.mainForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS_RES.modifyForm.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS.Properties.Resources.resources
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE_ABAS_RES.csproj.GenerateResource.Cache
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE.exe
+E:\Users\Sebastien\Documents\Visual Studio 2015\Projects\PPE\PPE-Perso\PPE\obj\Debug\PPE.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\PPE.exe.config
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\PPE.exe
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\PPE.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\Dapper.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\Dapper.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE_ABAS_RES.authenticationForm.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE_ABAS_RES.Form1.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE_ABAS_RES.mainForm.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE_ABAS_RES.modifyForm.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE_ABAS.Properties.Resources.resources
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE_ABAS_RES.csproj.GenerateResource.Cache
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE.exe
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_Restaurants\PPE\obj\Debug\PPE.pdb

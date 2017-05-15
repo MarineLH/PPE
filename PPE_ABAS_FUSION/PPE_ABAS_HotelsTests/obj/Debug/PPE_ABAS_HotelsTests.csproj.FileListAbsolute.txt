@@ -1,0 +1,16 @@
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\obj\Debug\PPE_ABAS_HotelsTests.csprojResolveAssemblyReference.cache
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\obj\Debug\PPE_ABASTests.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\obj\Debug\PPE_ABASTests.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\PPE_ABASTests.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\PPE_ABASTests.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\PPE_ABAS_Hotels.exe
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\MySql.Data.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\ObjectListView.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\Dapper.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\BCrypt.Net.dll
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\PPE_ABAS_Hotels.pdb
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\ObjectListView.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\Dapper.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\BCrypt.Net.xml
+C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_HotelsTests\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
