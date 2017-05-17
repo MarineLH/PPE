@@ -367,6 +367,15 @@ namespace PPE_ABAS_Hotels.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Actualiser.
+        /// </summary>
+        internal static string f_main_refresh {
+            get {
+                return ResourceManager.GetString("f_main_refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Modifier le client n°.
         /// </summary>
         internal static string f_mod_cust_title {

@@ -40,8 +40,8 @@ namespace PPE_ABAS_Hotels
         public static string hotelGetReservations = @"SELECT * FROM Reservation r
                                                     LEFT JOIN Client c on r.Client_cli_id = c.cli_id
                                                     LEFT JOIN ReservationStatus rs on r.ReservationStatus_rest_id = rs.reservStatus_id
-                                                    WHERE ReservationStatus_rest_id = 1 OR ReservationStatus_rest_id = 2
-                                                    AND Chambre_Etage_Hotel_hotel_bat_id = @batId";
+                                                    WHERE Chambre_Etage_Hotel_hotel_bat_id = @batId
+                                                    AND (ReservationStatus_rest_id = 1 OR ReservationStatus_rest_id = 2);";
 
         /// <summary>
         /// Récupérer les anciennes réservations passées
@@ -49,8 +49,8 @@ namespace PPE_ABAS_Hotels
         public static string hotelGetHistorique = @"SELECT * FROM Reservation r
                                                     LEFT JOIN Client c on r.Client_cli_id = c.cli_id
                                                     LEFT JOIN ReservationStatus rs on r.ReservationStatus_rest_id = rs.reservStatus_id
-                                                    WHERE ReservationStatus_rest_id = 3 OR ReservationStatus_rest_id = 4   
-                                                    AND Chambre_Etage_Hotel_hotel_bat_id = @batId";
+                                                    WHERE Chambre_Etage_Hotel_hotel_bat_id = @batId
+                                                    AND (ReservationStatus_rest_id = 3 OR ReservationStatus_rest_id = 4);";
 
         /// <summary>
         /// Récupérer les clients d'un hôtel particulier, avec le nombre de réservations dans l'hotel, et dans tous les hotels de la chaine

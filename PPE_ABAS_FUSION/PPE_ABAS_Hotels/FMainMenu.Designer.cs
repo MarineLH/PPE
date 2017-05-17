@@ -70,6 +70,7 @@
             this.cm_olvi_client = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.modifierLesInformationsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierLesInformationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bt_refresh = new System.Windows.Forms.Button();
             this.tabs.SuspendLayout();
             this.tp_resas_en_cours.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.olv_resas)).BeginInit();
@@ -95,8 +96,8 @@
             // 
             // tabs
             // 
-            this.tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabs.Controls.Add(this.tp_resas_en_cours);
             this.tabs.Controls.Add(this.tp_historique);
@@ -128,8 +129,8 @@
             this.olv_resas.AllColumns.Add(this.olvc_resa_clientName);
             this.olv_resas.AllColumns.Add(this.olvc_resa_numChambre);
             this.olv_resas.AllColumns.Add(this.olvc_resa_status);
-            this.olv_resas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.olv_resas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.olv_resas.CellEditUseWholeCell = false;
             this.olv_resas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -209,8 +210,8 @@
             this.olv_histo.AllColumns.Add(this.olvc_histo_client);
             this.olv_histo.AllColumns.Add(this.olvc_histo_chambre);
             this.olv_histo.AllColumns.Add(this.olvc_histo_status);
-            this.olv_histo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.olv_histo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.olv_histo.CellEditUseWholeCell = false;
             this.olv_histo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -288,8 +289,8 @@
             this.olv_clients.AllColumns.Add(this.olvc_client_mail);
             this.olv_clients.AllColumns.Add(this.olvc_client_totalHotel);
             this.olv_clients.AllColumns.Add(this.olvc_client_totalChaine);
-            this.olv_clients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.olv_clients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.olv_clients.CellEditUseWholeCell = false;
             this.olv_clients.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -468,12 +469,25 @@
             this.modifierLesInformationsToolStripMenuItem.Text = "Modifier les informations";
             this.modifierLesInformationsToolStripMenuItem.Click += new System.EventHandler(this.modifierLesInformationsToolStripMenuItem_Click);
             // 
+            // bt_refresh
+            // 
+            this.bt_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.bt_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_refresh.Location = new System.Drawing.Point(537, 684);
+            this.bt_refresh.Name = "bt_refresh";
+            this.bt_refresh.Size = new System.Drawing.Size(139, 29);
+            this.bt_refresh.TabIndex = 5;
+            this.bt_refresh.Text = "Resources.f_main_refresh";
+            this.bt_refresh.UseVisualStyleBackColor = true;
+            this.bt_refresh.Click += new System.EventHandler(this.bt_refresh_Click);
+            // 
             // FMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.ClientSize = new System.Drawing.Size(1013, 717);
+            this.Controls.Add(this.bt_refresh);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.bt_addRes);
             this.Controls.Add(this.tabs);
@@ -543,5 +557,6 @@
         private System.Windows.Forms.ContextMenuStrip cm_olvi_client;
         private System.Windows.Forms.ToolStripMenuItem modifierLesInformationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierLesInformationsToolStripMenuItem1;
+        private System.Windows.Forms.Button bt_refresh;
     }
 }

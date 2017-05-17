@@ -316,4 +316,7 @@
   <data name="resa_must_checkin" xml:space="preserve">
     <value>La réservation doit d'abord être validée !</value>
   </data>
+  <data name="f_main_refresh" xml:space="preserve">
+    <value>Actualiser</value>
+  </data>
 </root>
