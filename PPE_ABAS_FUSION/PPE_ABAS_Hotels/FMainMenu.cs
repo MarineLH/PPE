@@ -70,10 +70,6 @@ namespace PPE_ABAS_Hotels
                 var queryHisto = SQLQueries.hotelGetHistorique;
                 var queryClients = SQLQueries.getClientsByHotel;
 
-                HotelResasEnCours = null;
-                HotelHistorique = null;
-                HotelClients = null;
-
                 // update resas en cours
                 this.HotelResasEnCours = connection.Query<Reservation, Client, ReservationStatus, Reservation>(
                     queryResa, 
@@ -252,11 +248,6 @@ namespace PPE_ABAS_Hotels
             }
         }
 
-        private void bt_refresh_Click(object sender, EventArgs e)
-        {
-            SetBatimentInfos();
-        }
-
         private void SetTexts()
         {
             // Mise en place des strings
@@ -266,7 +257,6 @@ namespace PPE_ABAS_Hotels
             tp_clientsHotel.Text = Resources.tp_clientsHotel;
             bt_quit.Text = Resources.quit;
             bt_addRes.Text = Resources.f_main_add;
-            bt_refresh.Text = Resources.f_main_refresh;
 
             lbl_selectedBat.Text = Globals.selectedBat.ToString();
             lbl_user.Text = Globals.selectedUser.ToString();

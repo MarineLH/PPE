@@ -18,12 +18,3 @@ C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\O
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Debug\PPE_ABAS_Hotels.FModCustomer.resources
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Debug\PPE_ABAS_Hotels.exe
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Debug\PPE_ABAS_Hotels.pdb
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.dll
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.WinForms.dll
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.pdb
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.xml
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.WinForms.pdb
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.WinForms.xml
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Debug\LiveCharts.Wpf.xml

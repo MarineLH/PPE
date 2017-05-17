@@ -27,5 +27,3 @@ C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Release
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Release\PPE_ABAS_Hotels.csproj.GenerateResource.Cache
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Release\PPE_ABAS_Hotels.exe
 C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\obj\Release\PPE_ABAS_Hotels.pdb
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Release\PPE_ABAS_Hotels.exe.CodeAnalysisLog.xml
-C:\Users\rvale_000\Desktop\Cours\PPE\PPE_ABAS_FUSION\PPE_ABAS_Hotels\bin\Release\PPE_ABAS_Hotels.exe.lastcodeanalysissucceeded
